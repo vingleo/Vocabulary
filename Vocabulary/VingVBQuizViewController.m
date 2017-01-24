@@ -5,6 +5,7 @@
 //  Created by vingleo on 16/10/27.
 //  Copyright © 2016年 Vingleo. All rights reserved.
 //  Create Git function by Vingleo 2017.01.22
+//  Add change question function
 
 #import "VingVBQuizViewController.h"
 #import "VingVBResultViewController.h"
