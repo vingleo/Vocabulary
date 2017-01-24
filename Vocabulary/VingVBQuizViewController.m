@@ -86,9 +86,9 @@
     [_answer2Button setTitle:[[[marrXMLData objectAtIndex:[_questionNumber intValue]]valueForKey:@"answer2"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] forState:UIControlStateNormal];
     [_answer3Button setTitle:[[[marrXMLData objectAtIndex:[_questionNumber intValue]]valueForKey:@"answer3"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] forState:UIControlStateNormal];
     
-    _currentIndex = [_questionNumber intValue];
-    NSLog(@"currentIndex is %lu",(unsigned long)_currentIndex);
-    
+
+    //_currentIndex = [_questionNumber intValue];
+    NSLog(@"currentIndex  is  %lu",(unsigned long)_currentIndex);
     
 }
 
@@ -121,6 +121,9 @@
         _audioText = [[[marrXMLData objectAtIndex:[_questionNumber intValue]]valueForKey:@"audio"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
         
         resultView.detailModal = @[_correctAnswerText,_userChooseText,_level1BaseText];
+        resultView.currentIndex = _currentIndex;
+        
+        
 //        resultView.detailModal = @[_keyID,_questionIndexKeyText,_level1BaseText,_level2BaseText,_questionTypeText,_questionText,_answer1Text,_answer2Text,_answer3Text,_correctAnswerText,_testWordText,_hintText,_audioText,_userChooseText];
         
     }

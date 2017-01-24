@@ -23,6 +23,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *resultLabel;
 @property (weak, nonatomic) IBOutlet UITableView *topTableView;
 
+@property NSUInteger currentIndex;
+
 - (IBAction)forwardClick:(id)sender;
 
 

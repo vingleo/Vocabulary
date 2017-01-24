@@ -111,7 +111,9 @@
         VingVBQuizViewController *quizView = [segue destinationViewController];
         
         self.index = [_detailModal[2] intValue];
-        quizView.currentIndex = self.index+1;
+        //quizView.currentIndex = self.index+1;
+        _currentIndex++;
+        quizView.currentIndex = _currentIndex;
         
     }
     
