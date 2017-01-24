@@ -87,7 +87,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qEP-MN-jfG">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qEP-MN-jfG">
                                 <rect key="frame" x="66" y="84" width="243" height="374"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K12-fc-mQT">
@@ -96,7 +96,7 @@
                                             <constraint firstAttribute="height" constant="173" id="hjE-sa-TKi"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Grq-WJ-4W7">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Grq-WJ-4W7">
                                         <rect key="frame" x="-6" y="242" width="257" height="88"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="257" id="2lY-ZU-YGe"/>
@@ -128,7 +128,7 @@
                         <constraints>
                             <constraint firstItem="qEP-MN-jfG" firstAttribute="leading" secondItem="c7e-LE-XNE" secondAttribute="leadingMargin" constant="50" id="E9Q-T5-1bI"/>
                             <constraint firstItem="qEP-MN-jfG" firstAttribute="centerX" secondItem="c7e-LE-XNE" secondAttribute="centerX" id="Fwq-RG-KUn"/>
-                            <constraint firstItem="qEP-MN-jfG" firstAttribute="top" secondItem="4UJ-9i-K7N" secondAttribute="bottom" constant="20" id="iqg-vN-Ye2"/>
+                            <constraint firstItem="qEP-MN-jfG" firstAttribute="top" secondItem="4UJ-9i-K7N" secondAttribute="bottom" constant="64" id="iqg-vN-Ye2"/>
                             <constraint firstItem="6rQ-gD-oYL" firstAttribute="top" secondItem="qEP-MN-jfG" secondAttribute="bottom" constant="209" id="vMr-zc-SK4"/>
                         </constraints>
                     </view>
@@ -359,7 +359,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aho-7o-ZTA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1736.5" y="1057.5"/>
+            <point key="canvasLocation" x="1930" y="1176"/>
         </scene>
         <!--VingVB Result View Controller-->
         <scene sceneID="I09-Xr-aaZ">
@@ -464,8 +464,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ptt-KP-HDF"/>
         <segue reference="B2d-T1-RXR"/>
         <segue reference="DLH-Of-uMI"/>
+        <segue reference="ptt-KP-HDF"/>
     </inferredMetricsTieBreakers>
 </document>
