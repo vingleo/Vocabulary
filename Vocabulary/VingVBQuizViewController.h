@@ -52,6 +52,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *answer2Button;
 @property (weak, nonatomic) IBOutlet UIButton *answer3Button;
 
+@property (weak, nonatomic) IBOutlet UILabel *questionNumLbl;
+
 - (IBAction)getChooseText:(id)sender;
 
 //For SearchBar

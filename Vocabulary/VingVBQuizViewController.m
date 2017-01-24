@@ -72,21 +72,22 @@
     NSLog(@"marrXMLData array count is:%lu",(unsigned long)[marrXMLData count]);
     NSLog(@"marrXMLData array is %@",marrXMLData);
     
-    self.level1BaseLabel.text = [[[marrXMLData objectAtIndex:[_questionNumber intValue]]valueForKey:@"level1Base"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    self.level1BaseLabel.text = [[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"level1Base"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 //    NSLog(@"level1BaseLabel text is : %@",self.level1BaseLabel);
-    self.level2BaseLabel.text = [[[marrXMLData objectAtIndex:[_questionNumber intValue]]valueForKey:@"level2Base"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    self.level2BaseLabel.text = [[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"level2Base"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 //    NSLog(@"level1BaseLabe2 text is : %@",self.level2BaseLabel);
-    self.questionTypeLabel.text = [[[marrXMLData objectAtIndex:[_questionNumber intValue]]valueForKey:@"questionType"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    self.questionTypeLabel.text = [[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"questionType"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 //    NSLog(@"questionTypeLabel text is : %@",self.questionTypeLabel);
     self.questionLabel.text = [[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"question"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 //    NSLog(@"questionLabel text is : %@", self.questionLabel);
     
     
-    [_answer1Button setTitle:[[[marrXMLData objectAtIndex:[_questionNumber intValue]]valueForKey:@"answer1"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] forState:UIControlStateNormal];
+    [_answer1Button setTitle:[[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"answer1"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] forState:UIControlStateNormal];
 //    NSLog(@"answer 1 is %@",self.answer1Button.titleLabel.text);
-    [_answer2Button setTitle:[[[marrXMLData objectAtIndex:[_questionNumber intValue]]valueForKey:@"answer2"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] forState:UIControlStateNormal];
-    [_answer3Button setTitle:[[[marrXMLData objectAtIndex:[_questionNumber intValue]]valueForKey:@"answer3"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] forState:UIControlStateNormal];
+    [_answer2Button setTitle:[[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"answer2"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] forState:UIControlStateNormal];
+    [_answer3Button setTitle:[[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"answer3"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] forState:UIControlStateNormal];
     
+    _questionNumLbl.text = [NSString stringWithFormat:@"Question %lu",_currentIndex+1];
 
     //_currentIndex = [_questionNumber intValue];
     NSLog(@"currentIndex  is  %lu",(unsigned long)_currentIndex);
