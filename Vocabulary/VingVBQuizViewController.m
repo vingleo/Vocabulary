@@ -87,7 +87,7 @@
     [_answer2Button setTitle:[[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"answer2"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] forState:UIControlStateNormal];
     [_answer3Button setTitle:[[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"answer3"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] forState:UIControlStateNormal];
     
-    _questionNumLbl.text = [NSString stringWithFormat:@"Question %lu",_currentIndex+1];
+    _questionNumLbl.text = [NSString stringWithFormat:@"Question #%lu",_currentIndex+1];
 
     //_currentIndex = [_questionNumber intValue];
     NSLog(@"currentIndex  is  %lu",(unsigned long)_currentIndex);
@@ -129,6 +129,9 @@
 //        resultView.detailModal = @[_keyID,_questionIndexKeyText,_level1BaseText,_level2BaseText,_questionTypeText,_questionText,_answer1Text,_answer2Text,_answer3Text,_correctAnswerText,_testWordText,_hintText,_audioText,_userChooseText];
         
     }
+    
+    
+    
 }
 
 - (IBAction)getChooseText:(id)sender {
