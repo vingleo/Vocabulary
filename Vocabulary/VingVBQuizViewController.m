@@ -149,6 +149,37 @@
     UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"I'm sure." style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
         
         [self performSegueWithIdentifier:@"back2main" sender:self];
+        
+        //for get Documents folder
+        NSFileManager *fileManager = [[NSFileManager alloc]init];
+        NSArray *urls = [fileManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask];
+        if ([urls count]>0) {
+            NSURL *documentsFolder = urls[0];
+            NSLog(@"%@",documentsFolder);
+        }
+        else {
+            NSLog(@"Could not find the Documents folder");
+        }
+        
+        NSString *tempDirectory = NSTemporaryDirectory();
+        NSLog(@"Temp Directory = %@",tempDirectory);
+        
+        //Add String to text file
+        NSString *someText  = @"Random string that won't be backed up.";
+        
+        NSString *destinationPath = [NSTemporaryDirectory() stringByAppendingPathComponent:@"MyFile.txt"];
+        
+        NSError *error = nil;
+        BOOL successed = [someText writeToFile:destinationPath atomically:YES encoding:NSUTF8StringEncoding error:&error];
+        if (successed) {
+            NSLog(@"Successfully stored the file at: %@",destinationPath);
+        } else {
+            NSLog(@"Failed to store the file. Error = %@",error);
+        }
+        
+        
+        
+        NSLog(@"User Status saved.");
     }];
     
     [alert addAction:okAction];
