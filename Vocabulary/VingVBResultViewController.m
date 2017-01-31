@@ -4,7 +4,7 @@
 //
 //  Created by vingleo on 16/10/27.
 //  Copyright © 2016年 Vingleo. All rights reserved.
-//
+//  Remove tableview
 
 #import "VingVBResultViewController.h"
 #import "VingVBQuizViewController.h"
@@ -21,6 +21,8 @@
     
     NSString *correctAnswer = _detailModal[0];
     NSString *userChoose = _detailModal[1];
+    NSLog(@"correct Answer is %@",correctAnswer);
+    NSLog(@"user Choose is %@",userChoose);
     
     if ([correctAnswer isEqualToString:userChoose]) {
         NSLog(@"正确!");
@@ -35,7 +37,7 @@
     _resultLabel.textColor = [UIColor redColor];
     }
     
-    self.topTableView.dataSource = self;
+    //self.topTableView.dataSource = self;
     
     
 }
@@ -121,6 +123,9 @@
     
 }
 
+
+//Delete Table view,use label text
+/*
 #pragma mark - Table view data source
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     //    NSInteger result = 0;
@@ -150,5 +155,7 @@
     
     return cell;
 }
-
+*/
+ 
+ 
 @end

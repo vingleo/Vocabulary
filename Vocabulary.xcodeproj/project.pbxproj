@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		182C0B7E1E388A3C00B1DA99 /* VingVBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182C0B7D1E388A3C00B1DA99 /* VingVBLoginViewController.m */; };
 		185EE0041DB76E3C00BFD856 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EE0031DB76E3C00BFD856 /* main.m */; };
 		185EE0071DB76E3C00BFD856 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EE0061DB76E3C00BFD856 /* AppDelegate.m */; };
 		185EE00D1DB76E3C00BFD856 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185EE00B1DB76E3C00BFD856 /* Main.storyboard */; };
@@ -20,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		182C0B7C1E388A3C00B1DA99 /* VingVBLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VingVBLoginViewController.h; sourceTree = "<group>"; };
+		182C0B7D1E388A3C00B1DA99 /* VingVBLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VingVBLoginViewController.m; sourceTree = "<group>"; };
 		185EDFFF1DB76E3C00BFD856 /* Vocabulary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vocabulary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		185EE0031DB76E3C00BFD856 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		185EE0051DB76E3C00BFD856 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -74,6 +77,8 @@
 				185EE0061DB76E3C00BFD856 /* AppDelegate.m */,
 				185F4FF41DC1E3E30068FB23 /* VingVBHomePageViewController.h */,
 				185F4FF51DC1E3E30068FB23 /* VingVBHomePageViewController.m */,
+				182C0B7C1E388A3C00B1DA99 /* VingVBLoginViewController.h */,
+				182C0B7D1E388A3C00B1DA99 /* VingVBLoginViewController.m */,
 				185F4FF11DC1E3530068FB23 /* VingVBQuizViewController.h */,
 				185F4FF21DC1E3530068FB23 /* VingVBQuizViewController.m */,
 				185F4FF71DC1E62B0068FB23 /* VingVBResultViewController.h */,
@@ -128,6 +133,7 @@
 				TargetAttributes = {
 					185EDFFE1DB76E3C00BFD856 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = EX2PTDBQWG;
 					};
 				};
 			};
@@ -168,6 +174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				182C0B7E1E388A3C00B1DA99 /* VingVBLoginViewController.m in Sources */,
 				185F4FF31DC1E3530068FB23 /* VingVBQuizViewController.m in Sources */,
 				185EE0071DB76E3C00BFD856 /* AppDelegate.m in Sources */,
 				185F4FFC1DC1E6B70068FB23 /* VingVBAboutViewController.m in Sources */,
@@ -289,7 +296,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EX2PTDBQWG;
 				INFOPLIST_FILE = Vocabulary/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Vingleo.Vocabulary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -300,7 +309,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EX2PTDBQWG;
 				INFOPLIST_FILE = Vocabulary/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Vingleo.Vocabulary;
 				PRODUCT_NAME = "$(TARGET_NAME)";

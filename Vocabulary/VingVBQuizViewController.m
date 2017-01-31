@@ -108,19 +108,44 @@
     if ([[segue identifier] isEqualToString:@"answer1Segue"]||[[segue identifier] isEqualToString:@"answer2Segue"]||[[segue identifier] isEqualToString:@"answer3Segue"]) {
         VingVBResultViewController *resultView = [segue destinationViewController];
         
-        _questionNumber = [[[marrXMLData objectAtIndex:[_questionNumber intValue]]valueForKey:@"keyID"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        _questionIndexKeyText = [[[marrXMLData objectAtIndex:[_questionNumber intValue]]valueForKey:@"questionIndexKey"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        //01_questionNumber = [[[marrXMLData objectAtIndex:[_questionNumber intValue]]valueForKey:@"keyID"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        _questionNumber = [[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"keyID"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        
+        //02_questionIndexKeyText = [[[marrXMLData objectAtIndex:[_questionNumber intValue]]valueForKey:@"questionIndexKey"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        _questionIndexKeyText = [[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"questionIndexKey"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        
+        //03_level1BaseText = [[[marrXMLData objectAtIndex:[_questionNumber intValue]]valueForKey:@"level1Base"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
         _level1BaseText = [[[marrXMLData objectAtIndex:[_questionNumber intValue]]valueForKey:@"level1Base"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        _level2BaseText = [[[marrXMLData objectAtIndex:[_questionNumber intValue]]valueForKey:@"level2Base"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        _questionTypeText = [[[marrXMLData objectAtIndex:[_questionNumber intValue]]valueForKey:@"questionType"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        _questionText = [[[marrXMLData objectAtIndex:[_questionNumber intValue]]valueForKey:@"question"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        _answer1Text = [[[marrXMLData objectAtIndex:[_questionNumber intValue]]valueForKey:@"answer1"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        _answer2Text = [[[marrXMLData objectAtIndex:[_questionNumber intValue]]valueForKey:@"answer2"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        _answer3Text = [[[marrXMLData objectAtIndex:[_questionNumber intValue]]valueForKey:@"answer3"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        _correctAnswerText = [[[marrXMLData objectAtIndex:[_questionNumber intValue]]valueForKey:@"correctAnswer"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        _testWordText = [[[marrXMLData objectAtIndex:[_questionNumber intValue]]valueForKey:@"testWord"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        _hintText = [[[marrXMLData objectAtIndex:[_questionNumber intValue]]valueForKey:@"hint"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        _audioText = [[[marrXMLData objectAtIndex:[_questionNumber intValue]]valueForKey:@"audio"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        
+        //04_level2BaseText = [[[marrXMLData objectAtIndex:[_questionNumber intValue]]valueForKey:@"level2Base"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        _level2BaseText = [[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"level2Base"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        
+        //05_questionTypeText = [[[marrXMLData objectAtIndex:[_questionNumber intValue]]valueForKey:@"questionType"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        _questionTypeText = [[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"questionType"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        
+        //06_questionText = [[[marrXMLData objectAtIndex:[_questionNumber intValue]]valueForKey:@"question"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        _questionText = [[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"question"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        
+        //07_answer1Text = [[[marrXMLData objectAtIndex:[_questionNumber intValue]]valueForKey:@"answer1"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        _answer1Text = [[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"answer1"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        
+        //08_answer2Text = [[[marrXMLData objectAtIndex:[_questionNumber intValue]]valueForKey:@"answer2"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        _answer2Text = [[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"answer2"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        
+        //09_answer3Text = [[[marrXMLData objectAtIndex:[_questionNumber intValue]]valueForKey:@"answer3"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        _answer3Text = [[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"answer3"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        
+        //10_correctAnswerText = [[[marrXMLData objectAtIndex:[_questionNumber intValue]]valueForKey:@"correctAnswer"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        _correctAnswerText = [[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"correctAnswer"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        
+        //11_testWordText = [[[marrXMLData objectAtIndex:[_questionNumber intValue]]valueForKey:@"testWord"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        _testWordText = [[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"testWord"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        
+        //12_hintText = [[[marrXMLData objectAtIndex:[_questionNumber intValue]]valueForKey:@"hint"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        _hintText = [[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"hint"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        
+        //_audioText = [[[marrXMLData objectAtIndex:[_questionNumber intValue]]valueForKey:@"audio"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        _audioText = [[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"audio"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
         
         resultView.detailModal = @[_correctAnswerText,_userChooseText,_level1BaseText];
         resultView.currentIndex = _currentIndex;
