@@ -1,0 +1,1323 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Row>
+		<questionNumber>1</questionNumber>
+		<questionIndexKey>1</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Which of the words below best completes the following sentence?</questionType>
+		<question>the prize-winning autobiography ____ Miles Davis</question>
+		<answer1>for</answer1>
+		<answer2>about</answer2>
+		<answer3>of</answer3>
+		<correctAnswer>of</correctAnswer>
+		<testWord>autobiography</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>2</questionNumber>
+		<questionIndexKey>1</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Which of the words below best completes the following sentence?</questionType>
+		<question>the prize-winning autobiography ______ Miles Davis</question>
+		<answer1>of</answer1>
+		<answer2>from</answer2>
+		<answer3>about</answer3>
+		<correctAnswer>of</correctAnswer>
+		<testWord>autobiography</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>3</questionNumber>
+		<questionIndexKey>1</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Which of the words below best completes the following sentence?</questionType>
+		<question>an encyclopedia ______ medicine</question>
+		<answer1>on</answer1>
+		<answer2>from</answer2>
+		<answer3>of</answer3>
+		<correctAnswer>of</correctAnswer>
+		<testWord>encyclopedia</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>4</questionNumber>
+		<questionIndexKey>1</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Which of the words below best completes the following sentence?</questionType>
+		<question>I wanted to know more about Noam Chomsky so I ______ him up in the encyclopedia.</question>
+		<answer1>looked</answer1>
+		<answer2>searched</answer2>
+		<answer3>examined</answer3>
+		<correctAnswer>looked</correctAnswer>
+		<testWord>encyclopedia</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>5</questionNumber>
+		<questionIndexKey>1</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Which of the words below best completes the following sentence?</questionType>
+		<question>I wanted to know more about Noam Chomsky so I ______ him up in the encyclopedia.</question>
+		<answer1>looked</answer1>
+		<answer2>found</answer2>
+		<answer3>examined</answer3>
+		<correctAnswer>looked</correctAnswer>
+		<testWord>encyclopedia</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>6</questionNumber>
+		<questionIndexKey>1</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Which of the words below best completes the following sentence?</questionType>
+		<question>It’s a ______ thriller set in Brazil.</question>
+		<answer1>political</answer1>
+		<answer2>government</answer2>
+		<answer3>mental</answer3>
+		<correctAnswer>political</correctAnswer>
+		<testWord>thriller</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>7</questionNumber>
+		<questionIndexKey>1</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Which of the words below best completes the following sentence?</questionType>
+		<question>He wrote the ______ biography of King Edward VIII.</question>
+		<answer1>genuine</answer1>
+		<answer2>official</answer2>
+		<answer3>real</answer3>
+		<correctAnswer>official</correctAnswer>
+		<testWord>biography</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>8</questionNumber>
+		<questionIndexKey>1</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Which of the words below best completes the following sentence?</questionType>
+		<question>the dialogue ______ Miranda and Caliban</question>
+		<answer1>between</answer1>
+		<answer2>opposite</answer2>
+		<answer3>of</answer3>
+		<correctAnswer>between</correctAnswer>
+		<testWord>dialogue</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>9</questionNumber>
+		<questionIndexKey>1</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Which of the words below best completes the following sentence?</questionType>
+		<question>the narrative ______ of the novel</question>
+		<answer1>build</answer1>
+		<answer2>structure</answer2>
+		<answer3>building</answer3>
+		<correctAnswer>structure</correctAnswer>
+		<testWord>narrative</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>10</questionNumber>
+		<questionIndexKey>1</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Which of the words below best completes the following sentence?</questionType>
+		<question>‘The Angler’ is a magazine ______ fishing.</question>
+		<answer1>of</answer1>
+		<answer2>in</answer2>
+		<answer3>about</answer3>
+		<correctAnswer>about</correctAnswer>
+		<testWord>magazine</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>11</questionNumber>
+		<questionIndexKey>1</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Which of the words below best completes the following sentence?</questionType>
+		<question>an encyclopedia ______ medicine</question>
+		<answer1>on</answer1>
+		<answer2>from</answer2>
+		<answer3>of</answer3>
+		<correctAnswer>of</correctAnswer>
+		<testWord>encyclopedia</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>12</questionNumber>
+		<questionIndexKey>1</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Which of the words below best completes the following sentence?</questionType>
+		<question>We advise all our students to ______ a good dictionary.</question>
+		<answer1>insult</answer1>
+		<answer2>use</answer2>
+		<answer3>search</answer3>
+		<correctAnswer>use</correctAnswer>
+		<testWord>dictionary</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>13</questionNumber>
+		<questionIndexKey>1</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Which of the words below best completes the following sentence?</questionType>
+		<question>She’s just written a biography ______ Alfred Hitchcock.</question>
+		<answer1>of</answer1>
+		<answer2>from</answer2>
+		<answer3>around</answer3>
+		<correctAnswer>of</correctAnswer>
+		<testWord>biography</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>14</questionNumber>
+		<questionIndexKey>1</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Which of the words below best completes the following sentence?</questionType>
+		<question>He wrote this poem ______ his mother.</question>
+		<answer1>by</answer1>
+		<answer2>from</answer2>
+		<answer3>about</answer3>
+		<correctAnswer>about</correctAnswer>
+		<testWord>poem</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>15</questionNumber>
+		<questionIndexKey>1</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Which of the words below best completes the following sentence?</questionType>
+		<question>the dialogue ______ Miranda and Caliban</question>
+		<answer1>against</answer1>
+		<answer2>of</answer2>
+		<answer3>between</answer3>
+		<correctAnswer>between</correctAnswer>
+		<testWord>dialogue</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>16</questionNumber>
+		<questionIndexKey>1</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Which of the words below best completes the following sentence?</questionType>
+		<question>The hardback ______ of the novel costs £12.99.</question>
+		<answer1>kind</answer1>
+		<answer2>type</answer2>
+		<answer3>edition</answer3>
+		<correctAnswer>edition</correctAnswer>
+		<testWord>hardback</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>17</questionNumber>
+		<questionIndexKey>1</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Which of the words below best completes the following sentence?</questionType>
+		<question>a hardback ______ Charles Dickens</question>
+		<answer1>for</answer1>
+		<answer2>by</answer2>
+		<answer3>from</answer3>
+		<correctAnswer>by</correctAnswer>
+		<testWord>hardback</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>18</questionNumber>
+		<questionIndexKey>1</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Which of the words below best completes the following sentence?</questionType>
+		<question>The hardback ______ of the novel costs £12.99.</question>
+		<answer1>edition</answer1>
+		<answer2>model</answer2>
+		<answer3>type</answer3>
+		<correctAnswer>edition</correctAnswer>
+		<testWord>hardback</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>19</questionNumber>
+		<questionIndexKey>1</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Which of the words below best completes the following sentence?</questionType>
+		<question>a ______ atlas of Europe</question>
+		<answer1>geography</answer1>
+		<answer2>road</answer2>
+		<answer3>motor</answer3>
+		<correctAnswer>road</correctAnswer>
+		<testWord>atlas</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>20</questionNumber>
+		<questionIndexKey>1</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Which of the words below best completes the following sentence?</questionType>
+		<question>a ______ atlas of Europe</question>
+		<answer1>travelling</answer1>
+		<answer2>motor</answer2>
+		<answer3>road</answer3>
+		<correctAnswer>road</correctAnswer>
+		<testWord>atlas</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>21</questionNumber>
+		<questionIndexKey>1</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Which of the words below best completes the following sentence?</questionType>
+		<question>He started his speech with a quotation ______ Shakespeare.</question>
+		<answer1>from</answer1>
+		<answer2>of</answer2>
+		<answer3>in</answer3>
+		<correctAnswer>from</correctAnswer>
+		<testWord>quotation</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>22</questionNumber>
+		<questionIndexKey>1</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Which of the words below best completes the following sentence?</questionType>
+		<question>a ______ quotation from a poem by T.S. Eliot</question>
+		<answer1>known</answer1>
+		<answer2>world-wide</answer2>
+		<answer3>famous</answer3>
+		<correctAnswer>famous</correctAnswer>
+		<testWord>quotation</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>23</questionNumber>
+		<questionIndexKey>1</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Which of the words below best completes the following sentence?</questionType>
+		<question>The movie is based on a novel ______ Graham Greene.</question>
+		<answer1>from</answer1>
+		<answer2>of</answer2>
+		<answer3>by</answer3>
+		<correctAnswer>by</correctAnswer>
+		<testWord>novel</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>24</questionNumber>
+		<questionIndexKey>1</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Which of the words below best completes the following sentence?</questionType>
+		<question>Howard Stern’s ______ autobiography</question>
+		<answer1>private</answer1>
+		<answer2>best-selling</answer2>
+		<answer3>public</answer3>
+		<correctAnswer>best-selling</correctAnswer>
+		<testWord>autobiography</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>25</questionNumber>
+		<questionIndexKey>1</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Which of the words below best completes the following sentence?</questionType>
+		<question>It’s a ______ thriller set in Brazil.</question>
+		<answer1>politics</answer1>
+		<answer2>political</answer2>
+		<answer3>mental</answer3>
+		<correctAnswer>political</correctAnswer>
+		<testWord>thriller</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>26</questionNumber>
+		<questionIndexKey>1</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Which of the words below best completes the following sentence?</questionType>
+		<question>She was a very ______ writer.</question>
+		<answer1>well</answer1>
+		<answer2>populous</answer2>
+		<answer3>good</answer3>
+		<correctAnswer>good</correctAnswer>
+		<testWord>writer</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>27</questionNumber>
+		<questionIndexKey>1</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Business</level2Base>
+		<questionType>Which of the words below best completes the following sentence?</questionType>
+		<question>the President ______ a corporation</question>
+		<answer1>over</answer1>
+		<answer2>of</answer2>
+		<answer3>to</answer3>
+		<correctAnswer>of</correctAnswer>
+		<testWord>corporation</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>28</questionNumber>
+		<questionIndexKey>1</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Business</level2Base>
+		<questionType>Which of the words below best completes the following sentence?</questionType>
+		<question>The company is the world’s leading manufacturer ______ safety glass.</question>
+		<answer1>about</answer1>
+		<answer2>of</answer2>
+		<answer3>from</answer3>
+		<correctAnswer>of</correctAnswer>
+		<testWord>manufacturer</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>29</questionNumber>
+		<questionIndexKey>1</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Business</level2Base>
+		<questionType>Which of the words below best completes the following sentence?</questionType>
+		<question>someone who owns shares in a company or business</question>
+		<answer1>economist</answer1>
+		<answer2>investor</answer2>
+		<answer3>shareholder</answer3>
+		<correctAnswer>shareholder</correctAnswer>
+		<testWord>shareholder</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>30</questionNumber>
+		<questionIndexKey>1</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Business</level2Base>
+		<questionType>Which of the words below best completes the following sentence?</questionType>
+		<question>She’s an economist ______ University College, London.</question>
+		<answer1>by</answer1>
+		<answer2>at</answer2>
+		<answer3>from</answer3>
+		<correctAnswer>at</correctAnswer>
+		<testWord>economist</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>31</questionNumber>
+		<questionIndexKey>1</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Business</level2Base>
+		<questionType>Which of the words below best completes the following sentence?</questionType>
+		<question>Booms and slumps in economic ______ occur periodically.</question>
+		<answer1>behaviour</answer1>
+		<answer2>action</answer2>
+		<answer3>activity</answer3>
+		<correctAnswer>activity</correctAnswer>
+		<testWord>economic</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>32</questionNumber>
+		<questionIndexKey>1</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Law</level2Base>
+		<questionType>Which of the words below best completes the following sentence?</questionType>
+		<question>Do the police ______ any evidence against him?</question>
+		<answer1>know</answer1>
+		<answer2>show</answer2>
+		<answer3>have</answer3>
+		<correctAnswer>have</correctAnswer>
+		<testWord>evidence</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>33</questionNumber>
+		<questionIndexKey>1</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Law</level2Base>
+		<questionType>Which of the words below best completes the following sentence?</questionType>
+		<question>She was accused of ______ perjury.</question>
+		<answer1>declaring</answer1>
+		<answer2>giving</answer2>
+		<answer3>committing</answer3>
+		<correctAnswer>committing</correctAnswer>
+		<testWord>perjury</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>34</questionNumber>
+		<questionIndexKey>2</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Which of the following explanations best describes </questionType>
+		<question>a sentence or phrase from a book</question>
+		<answer1>a piece of writing which is arranged in patterns of lines and sounds</answer1>
+		<answer2>the series of events described in a story and the way that the writer describes them</answer2>
+		<answer3>a piece of writing which is arranged in patterns of lines and sounds</answer3>
+		<correctAnswer>poem</correctAnswer>
+		<testWord>poem</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>35</questionNumber>
+		<questionIndexKey>2</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Which of the following explanations best describes </questionType>
+		<question>a thin book giving information or advertising something</question>
+		<answer1>a large thin book with a paper cover that is sold weekly or monthly</answer1>
+		<answer2>a book with a cover made of stiff paper</answer2>
+		<answer3>book with a cover made of stiff paper</answer3>
+		<correctAnswer>paperback</correctAnswer>
+		<testWord>paperback</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>36</questionNumber>
+		<questionIndexKey>2</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Which of the following explanations best describes </questionType>
+		<question>a thin book giving information or advertising something</question>
+		<answer1>a large thin book with a paper cover that is sold weekly or monthly</answer1>
+		<answer2>a book with a hard cover</answer2>
+		<answer3>a book with a hard cover</answer3>
+		<correctAnswer>hardback</correctAnswer>
+		<testWord>hardback</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>37</questionNumber>
+		<questionIndexKey>2</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Which of the following explanations best describes </questionType>
+		<question>the things that people in a book say to each other</question>
+		<answer1>books, poems, articles etc by a particular writer</answer1>
+		<answer2>a sentence or phrase from a book</answer2>
+		<answer3>a sentence or phrase from a book</answer3>
+		<correctAnswer>quotation</correctAnswer>
+		<testWord>quotation</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>38</questionNumber>
+		<questionIndexKey>2</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Which of the following explanations best describes </questionType>
+		<question>a book that tells you the meaning of words and lists them in alphabetical order</question>
+		<answer1>a book of maps</answer1>
+		<answer2>a book that contains information and ideas about a subject you are studying</answer2>
+		<answer3>a book that tells you the meaning of words and lists them in alphabetical order</answer3>
+		<correctAnswer>dictionary</correctAnswer>
+		<testWord>dictionary</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>39</questionNumber>
+		<questionIndexKey>2</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Which of the following explanations best describes </questionType>
+		<question>someone who writes books, or who wrote a particular book</question>
+		<answer1>someone who writes books, stories, or articles in magazines as a job</answer1>
+		<answer2>someone who writes books about imaginary people or events</answer2>
+		<answer3>someone who writes books, stories, or articles in magazines as a job</answer3>
+		<correctAnswer>writer</correctAnswer>
+		<testWord>writer</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>40</questionNumber>
+		<questionIndexKey>2</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Business</level2Base>
+		<questionType>Which of the following explanations best describes</questionType>
+		<question>a person or organization whose job is to buy and sell shares, bonds etc for people</question>
+		<answer1>someone who gives money to a company, business, or bank in order to make a profit</answer1>
+		<answer2>someone who studies the way in which money and goods are produced and used and the systems of business and trade</answer2>
+		<answer3>someone who studies the way in which money and goods are produced and used and the systems of business and trade</answer3>
+		<correctAnswer>economist</correctAnswer>
+		<testWord>economist</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>41</questionNumber>
+		<questionIndexKey>2</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Business</level2Base>
+		<questionType>Which of the following explanations best describes</questionType>
+		<question>relating to money or the management of money</question>
+		<answer1>relating to money, taxes, debts etc that are owned and managed by the government</answer1>
+		<answer2>belonging or relating to a large company or corporation</answer2>
+		<answer3>belonging or relating to a large company or corporation</answer3>
+		<correctAnswer>corporate</correctAnswer>
+		<testWord>corporate</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>42</questionNumber>
+		<questionIndexKey>2</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Business</level2Base>
+		<questionType>Which of the following explanations best describes</questionType>
+		<question>relating to trade, industry, and the management of money</question>
+		<answer1>relating to money or the management of money</answer1>
+		<answer2>relating to money, taxes, debts etc that are owned and managed by the government</answer2>
+		<answer3>relating to trade, industry, and the management of money</answer3>
+		<correctAnswer>economic</correctAnswer>
+		<testWord>economic</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>43</questionNumber>
+		<questionIndexKey>2</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Law</level2Base>
+		<questionType>Which of the following explanations best describes </questionType>
+		<question>……</question>
+		<answer1>……</answer1>
+		<answer2>……</answer2>
+		<answer3>……</answer3>
+		<correctAnswer>Verdict</correctAnswer>
+		<testWord>Verdict</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>44</questionNumber>
+		<questionIndexKey>2</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Law</level2Base>
+		<questionType>Which of the following explanations best describes</questionType>
+		<question>someone who works as a judge dealing with less serious crimes</question>
+		<answer1>……</answer1>
+		<answer2>one member of a group of 12 ordinary people who listen to all the evidence about a crime and then decide whether someone is or is not guilty</answer2>
+		<answer3>someone who works as a judge dealing with less serious crimes</answer3>
+		<correctAnswer>magistrate</correctAnswer>
+		<testWord>magistrate</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>45</questionNumber>
+		<questionIndexKey>2</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Law</level2Base>
+		<questionType>Which of the following explanations best describes</questionType>
+		<question>the crime of telling a lie when giving information in a court of law</question>
+		<answer1>……</answer1>
+		<answer2>a document from a court that orders someone to do or not to do something</answer2>
+		<answer3>a document from a court that orders someone to do or not to do something</answer3>
+		<correctAnswer>writ</correctAnswer>
+		<testWord>writ</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>46</questionNumber>
+		<questionIndexKey>3</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Which of the words below means:</questionType>
+		<question>someone who writes books, stories, or articles in magazines as a job</question>
+		<answer1>……</answer1>
+		<answer2>novelist</answer2>
+		<answer3>writer</answer3>
+		<correctAnswer>writer</correctAnswer>
+		<testWord>writer</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>47</questionNumber>
+		<questionIndexKey>3</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Which of the words below means:</questionType>
+		<question>a book with a hard cover</question>
+		<answer1>……</answer1>
+		<answer2>hardback</answer2>
+		<answer3>magazine</answer3>
+		<correctAnswer>hardback</correctAnswer>
+		<testWord>hardback</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>48</questionNumber>
+		<questionIndexKey>3</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Which of the words below means:</questionType>
+		<question>a thin book giving information or advertising something</question>
+		<answer1>……</answer1>
+		<answer2>paperback</answer2>
+		<answer3>hardback</answer3>
+		<correctAnswer>brochure</correctAnswer>
+		<testWord>brochure</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>49</questionNumber>
+		<questionIndexKey>3</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Which of the words below means:</questionType>
+		<question>a sentence or phrase from a book</question>
+		<answer1>……</answer1>
+		<answer2>writing</answer2>
+		<answer3>quotation</answer3>
+		<correctAnswer>quotation</correctAnswer>
+		<testWord>quotation</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>50</questionNumber>
+		<questionIndexKey>3</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Which of the words below means:</questionType>
+		<question>a book about people and events that the writer has imagined</question>
+		<answer1>……</answer1>
+		<answer2>biography</answer2>
+		<answer3>literature</answer3>
+		<correctAnswer>novel</correctAnswer>
+		<testWord>novel</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>51</questionNumber>
+		<questionIndexKey>3</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Which of the words below means:</questionType>
+		<question>a book in which someone writes about their own life</question>
+		<answer1>autobiography</answer1>
+		<answer2>fiction</answer2>
+		<answer3>novel</answer3>
+		<correctAnswer>autobiography</correctAnswer>
+		<testWord>autobiography</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>52</questionNumber>
+		<questionIndexKey>3</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Which of the words below means:</questionType>
+		<question>a large thin book with a paper cover that is sold weekly or monthly</question>
+		<answer1>magazine</answer1>
+		<answer2>paperback</answer2>
+		<answer3>hardback</answer3>
+		<correctAnswer>magazine</correctAnswer>
+		<testWord>magazine</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>53</questionNumber>
+		<questionIndexKey>3</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Which of the words below means:</questionType>
+		<question>a book with a cover made of stiff paper</question>
+		<answer1>brochure</answer1>
+		<answer2>paperback</answer2>
+		<answer3>magazine</answer3>
+		<correctAnswer>paperback</correctAnswer>
+		<testWord>paperback</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>54</questionNumber>
+		<questionIndexKey>3</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Which of the words below means:</questionType>
+		<question>a book that contains information and ideas about a subject you are studying</question>
+		<answer1>textbook</answer1>
+		<answer2>atlas</answer2>
+		<answer3>dictionary</answer3>
+		<correctAnswer>textbook</correctAnswer>
+		<testWord>textbook</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>55</questionNumber>
+		<questionIndexKey>3</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Law</level2Base>
+		<questionType>Which of the words below means:</questionType>
+		<question>the process of taking claims to a court of law</question>
+		<answer1>litigation</answer1>
+		<answer2>hearing</answer2>
+		<answer3>case</answer3>
+		<correctAnswer>litigation</correctAnswer>
+		<testWord>litigation</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>56</questionNumber>
+		<questionIndexKey>3</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Law</level2Base>
+		<questionType>Which of the words below means:</questionType>
+		<question>a legal process to find out the cause of someone’s death</question>
+		<answer1>trial</answer1>
+		<answer2>inquest</answer2>
+		<answer3>lawsuit</answer3>
+		<correctAnswer>inquest</correctAnswer>
+		<testWord>inquest</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>57</questionNumber>
+		<questionIndexKey>3</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Law</level2Base>
+		<questionType>Which of the words below means:</questionType>
+		<question>the official in control of a court who decides how criminals should be punished</question>
+		<answer1>jury</answer1>
+		<answer2>judge</answer2>
+		<answer3>juror</answer3>
+		<correctAnswer>judge</correctAnswer>
+		<testWord>judge</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>58</questionNumber>
+		<questionIndexKey>3</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Law</level2Base>
+		<questionType>Which of the words below means:</questionType>
+		<question>a lawyer who is trying to prove in a court of law that someone is guilty of a crime</question>
+		<answer1>magistrate</answer1>
+		<answer2>prosecutor</answer2>
+		<answer3>counsel</answer3>
+		<correctAnswer>prosecutor</correctAnswer>
+		<testWord>prosecutor</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>59</questionNumber>
+		<questionIndexKey>3</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Law</level2Base>
+		<questionType>Which of the words below means:</questionType>
+		<question>a group of 12 ordinary people who listen to all the evidence about a crime and then decide whether someone is or is not guilty</question>
+		<answer1>jury</answer1>
+		<answer2>solicitor</answer2>
+		<answer3>lawyer</answer3>
+		<correctAnswer>jury</correctAnswer>
+		<testWord>jury</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>60</questionNumber>
+		<questionIndexKey>4</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Listen to the word and write it on the line. If you need help, press the button to see the definition</questionType>
+		<question>……</question>
+		<answer1>……</answer1>
+		<answer2>……</answer2>
+		<answer3>……</answer3>
+		<correctAnswer>poet</correctAnswer>
+		<testWord>poet</testWord>
+		<hint>someone who writes poems</hint>
+		<audio>\audio\poet.aif</audio>
+	</Row>
+	<Row>
+		<questionNumber>61</questionNumber>
+		<questionIndexKey>4</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Listen to the word and write it on the line. If you need help, press the button to see the definition</questionType>
+		<question>……</question>
+		<answer1>……</answer1>
+		<answer2>……</answer2>
+		<answer3>……</answer3>
+		<correctAnswer>quotation</correctAnswer>
+		<testWord>quotation</testWord>
+		<hint>a sentence or phrase from a book</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>62</questionNumber>
+		<questionIndexKey>4</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Listen to the word and write it on the line. If you need help, press the button to see the definition</questionType>
+		<question>……</question>
+		<answer1>……</answer1>
+		<answer2>……</answer2>
+		<answer3>……</answer3>
+		<correctAnswer>literature</correctAnswer>
+		<testWord>literature</testWord>
+		<hint>books, plays, and poems, especially famous ones that people think are important</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>63</questionNumber>
+		<questionIndexKey>4</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Listen to the word and write it on the line. If you need help, press the button to see the definition</questionType>
+		<question>……</question>
+		<answer1>……</answer1>
+		<answer2>……</answer2>
+		<answer3>……</answer3>
+		<correctAnswer>textbook</correctAnswer>
+		<testWord>textbook</testWord>
+		<hint>a book that contains information and ideas about a subject, which you use when you are studying that subject</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>64</questionNumber>
+		<questionIndexKey>4</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Listen to the word and write it on the line. If you need help, press the button to see the definition</questionType>
+		<question>……</question>
+		<answer1>……</answer1>
+		<answer2>……</answer2>
+		<answer3>……</answer3>
+		<correctAnswer>thriller</correctAnswer>
+		<testWord>thriller</testWord>
+		<hint>an exciting story, for example about a crime or war, in which surprising events happen suddenly</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>65</questionNumber>
+		<questionIndexKey>4</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Listen to the word and write it on the line. If you need help, press the button to see the definition</questionType>
+		<question>……</question>
+		<answer1>……</answer1>
+		<answer2>……</answer2>
+		<answer3>……</answer3>
+		<correctAnswer>hardback</correctAnswer>
+		<testWord>hardback</testWord>
+		<hint>a book with a hard cover</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>66</questionNumber>
+		<questionIndexKey>4</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>……</questionType>
+		<question>……</question>
+		<answer1>……</answer1>
+		<answer2>……</answer2>
+		<answer3>……</answer3>
+		<correctAnswer>novelist</correctAnswer>
+		<testWord>novelist</testWord>
+		<hint>someone who writes books about imaginary people or events</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>67</questionNumber>
+		<questionIndexKey>4</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Business</level2Base>
+		<questionType>Listen to the word and write it on the line. If you need help, press the button to see the definition</questionType>
+		<question>……</question>
+		<answer1>……</answer1>
+		<answer2>……</answer2>
+		<answer3>……</answer3>
+		<correctAnswer>economist</correctAnswer>
+		<testWord>economist</testWord>
+		<hint>someone who studies the way in which money and goods are produced and used and the systems of business and trade</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>68</questionNumber>
+		<questionIndexKey>5</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Listen to the sentence and write the missing word in the gap</questionType>
+		<question>At several points in the _________ the two stories cross.</question>
+		<answer1>narrative</answer1>
+		<answer2>……</answer2>
+		<answer3>……</answer3>
+		<correctAnswer>……</correctAnswer>
+		<testWord>……</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>69</questionNumber>
+		<questionIndexKey>5</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Listen to the sentence and write the missing word in the gap</questionType>
+		<question>His first novel sold over 40,000 copies in ________.</question>
+		<answer1>hardback</answer1>
+		<answer2>……</answer2>
+		<answer3>……</answer3>
+		<correctAnswer>……</correctAnswer>
+		<testWord>……</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>70</questionNumber>
+		<questionIndexKey>5</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Listen to the sentence and write the missing word in the gap</questionType>
+		<question>a holiday _________</question>
+		<answer1>brochuren</answer1>
+		<answer2>……</answer2>
+		<answer3>……</answer3>
+		<correctAnswer>……</correctAnswer>
+		<testWord>……</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>71</questionNumber>
+		<questionIndexKey>6</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Fill in the word which means</questionType>
+		<question>‘Does anyone know when Mozart was born?’ ‘Look it up in the e___________.’</question>
+		<answer1>……</answer1>
+		<answer2>……</answer2>
+		<answer3>……</answer3>
+		<correctAnswer>ncylopedia</correctAnswer>
+		<testWord>……</testWord>
+		<hint>a large book or set of books containing facts about a lot of different subjects</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>72</questionNumber>
+		<questionIndexKey>6</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Fill in the word which means</questionType>
+		<question>a road a____ of Europe</question>
+		<answer1>……</answer1>
+		<answer2>……</answer2>
+		<answer3>……</answer3>
+		<correctAnswer>tlas</correctAnswer>
+		<testWord>……</testWord>
+		<hint>a book of maps</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>73</questionNumber>
+		<questionIndexKey>6</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Fill in the word which means</questionType>
+		<question>l_________</question>
+		<answer1>……</answer1>
+		<answer2>……</answer2>
+		<answer3>……</answer3>
+		<correctAnswer>literature </correctAnswer>
+		<testWord>……</testWord>
+		<hint>books, plays, and poems</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>74</questionNumber>
+		<questionIndexKey>6</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Fill in the word which means</questionType>
+		<question>When I was young I wanted to be a w_____.</question>
+		<answer1>……</answer1>
+		<answer2>……</answer2>
+		<answer3>……</answer3>
+		<correctAnswer>riter</correctAnswer>
+		<testWord>……</testWord>
+		<hint>someone who writes books, stories, or articles in magazines as a job</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>75</questionNumber>
+		<questionIndexKey>6</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Fill in the word which means</questionType>
+		<question>the great Russian n_______, Leo Tolstoy</question>
+		<answer1>……</answer1>
+		<answer2>……</answer2>
+		<answer3>……</answer3>
+		<correctAnswer>ovelist</correctAnswer>
+		<testWord>……</testWord>
+		<hint>someone who writes books about imaginary people or events</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>76</questionNumber>
+		<questionIndexKey>6</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Fill in the word which means</questionType>
+		<question>Thomas Hardy was one of her favourite a______.</question>
+		<answer1>……</answer1>
+		<answer2>……</answer2>
+		<answer3>……</answer3>
+		<correctAnswer>uthors</correctAnswer>
+		<testWord>……</testWord>
+		<hint>someone who writes books, or who wrote a particular book</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>77</questionNumber>
+		<questionIndexKey>6</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Fill in the word which means</questionType>
+		<question>His first novel sold over 40,000 copies in h_______.</question>
+		<answer1>……</answer1>
+		<answer2>……</answer2>
+		<answer3>……</answer3>
+		<correctAnswer>ardback</correctAnswer>
+		<testWord>……</testWord>
+		<hint>a book with a hard cover</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>78</questionNumber>
+		<questionIndexKey>6</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Fill in the word which means</questionType>
+		<question>h_______</question>
+		<answer1>……</answer1>
+		<answer2>……</answer2>
+		<answer3>……</answer3>
+		<correctAnswer>ardback</correctAnswer>
+		<testWord>……</testWord>
+		<hint>a book with a hard cover</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>79</questionNumber>
+		<questionIndexKey>6</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Fill in the word which means</questionType>
+		<question>f______</question>
+		<answer1>……</answer1>
+		<answer2>……</answer2>
+		<answer3>……</answer3>
+		<correctAnswer>iction</correctAnswer>
+		<testWord>……</testWord>
+		<hint>books about imaginary people and events</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>80</questionNumber>
+		<questionIndexKey>6</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Fill in the word which means</questionType>
+		<question>a____</question>
+		<answer1>……</answer1>
+		<answer2>……</answer2>
+		<answer3>……</answer3>
+		<correctAnswer>tlas</correctAnswer>
+		<testWord>……</testWord>
+		<hint>a book of maps</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>81</questionNumber>
+		<questionIndexKey>6</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Fill in the word which means</questionType>
+		<question>q________</question>
+		<answer1>……</answer1>
+		<answer2>……</answer2>
+		<answer3>……</answer3>
+		<correctAnswer>uotation</correctAnswer>
+		<testWord>……</testWord>
+		<hint>a sentence or phrase from a book</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>82</questionNumber>
+		<questionIndexKey>6</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Books/Literature</level2Base>
+		<questionType>Fill in the word which means</questionType>
+		<question>In her a____________, she writes about her childhood in Zimbabwe.</question>
+		<answer1>……</answer1>
+		<answer2>……</answer2>
+		<answer3>……</answer3>
+		<correctAnswer>utobiography</correctAnswer>
+		<testWord>……</testWord>
+		<hint>a book in which someone writes about their own life</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>83</questionNumber>
+		<questionIndexKey>6</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Business</level2Base>
+		<questionType>Fill in the word which means</questionType>
+		<question>c__________</question>
+		<answer1>……</answer1>
+		<answer2>……</answer2>
+		<answer3>……</answer3>
+		<correctAnswer>orporation</correctAnswer>
+		<testWord>……</testWord>
+		<hint>a big company, or a group of companies acting together as a single organization</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>84</questionNumber>
+		<questionIndexKey>6</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Business</level2Base>
+		<questionType>Fill in the word which means</questionType>
+		<question>s_______</question>
+		<answer1>……</answer1>
+		<answer2>……</answer2>
+		<answer3>……</answer3>
+		<correctAnswer>tart-up</correctAnswer>
+		<testWord>……</testWord>
+		<hint>a new small company or business</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>85</questionNumber>
+		<questionIndexKey>6</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Business</level2Base>
+		<questionType>Fill in the word which means</questionType>
+		<question>Leading e_________ are predicting another recession.</question>
+		<answer1>……</answer1>
+		<answer2>……</answer2>
+		<answer3>……</answer3>
+		<correctAnswer>conomists</correctAnswer>
+		<testWord>……</testWord>
+		<hint>someone who studies the way in which money and goods are produced and used and the systems of business and trade</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>86</questionNumber>
+		<questionIndexKey>6</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Business</level2Base>
+		<questionType>Fill in the word which means</questionType>
+		<question>e_______</question>
+		<answer1>……</answer1>
+		<answer2>……</answer2>
+		<answer3>……</answer3>
+		<correctAnswer>conomic</correctAnswer>
+		<testWord>……</testWord>
+		<hint>relating to trade, industry, and the management of money</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>87</questionNumber>
+		<questionIndexKey>6</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Law</level2Base>
+		<questionType>Fill in the word which means</questionType>
+		<question>a legal process in which a judge and often a jury decide whether someone is guilty of a crime</question>
+		<answer1>……</answer1>
+		<answer2>……</answer2>
+		<answer3>……</answer3>
+		<correctAnswer>trial</correctAnswer>
+		<testWord>……</testWord>
+		<hint>……</hint>
+		<audio>……</audio>
+	</Row>
+	<Row>
+		<questionNumber>88</questionNumber>
+		<questionIndexKey>6</questionIndexKey>
+		<level1Base>Topic Vocabulary</level1Base>
+		<level2Base>Law</level2Base>
+		<questionType>Fill in the word which means</questionType>
+		<question>s________</question>
+		<answer1>……</answer1>
+		<answer2>……</answer2>
+		<answer3>……</answer3>
+		<correctAnswer>solicitor</correctAnswer>
+		<testWord>……</testWord>
+		<hint>someone in Britain who is trained to give legal advice, prepare legal papers, and defend people in the lower courts of law</hint>
+		<audio>……</audio>
+	</Row>
+</Root>

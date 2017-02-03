@@ -1,0 +1,345 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		182C0B7E1E388A3C00B1DA99 /* VingVBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182C0B7D1E388A3C00B1DA99 /* VingVBLoginViewController.m */; };
+		185EE0041DB76E3C00BFD856 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EE0031DB76E3C00BFD856 /* main.m */; };
+		185EE0071DB76E3C00BFD856 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EE0061DB76E3C00BFD856 /* AppDelegate.m */; };
+		185EE00D1DB76E3C00BFD856 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185EE00B1DB76E3C00BFD856 /* Main.storyboard */; };
+		185EE00F1DB76E3C00BFD856 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 185EE00E1DB76E3C00BFD856 /* Assets.xcassets */; };
+		185EE0121DB76E3C00BFD856 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185EE0101DB76E3C00BFD856 /* LaunchScreen.storyboard */; };
+		185F4FF31DC1E3530068FB23 /* VingVBQuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185F4FF21DC1E3530068FB23 /* VingVBQuizViewController.m */; };
+		185F4FF61DC1E3E30068FB23 /* VingVBHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185F4FF51DC1E3E30068FB23 /* VingVBHomePageViewController.m */; };
+		185F4FF91DC1E62B0068FB23 /* VingVBResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185F4FF81DC1E62B0068FB23 /* VingVBResultViewController.m */; };
+		185F4FFC1DC1E6B70068FB23 /* VingVBAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185F4FFB1DC1E6B70068FB23 /* VingVBAboutViewController.m */; };
+		185F500A1DC87E7E0068FB23 /* vocaXML.xml in Resources */ = {isa = PBXBuildFile; fileRef = 185F50091DC87E7E0068FB23 /* vocaXML.xml */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		182C0B7C1E388A3C00B1DA99 /* VingVBLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VingVBLoginViewController.h; sourceTree = "<group>"; };
+		182C0B7D1E388A3C00B1DA99 /* VingVBLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VingVBLoginViewController.m; sourceTree = "<group>"; };
+		185EDFFF1DB76E3C00BFD856 /* Vocabulary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vocabulary.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		185EE0031DB76E3C00BFD856 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		185EE0051DB76E3C00BFD856 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		185EE0061DB76E3C00BFD856 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		185EE00C1DB76E3C00BFD856 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		185EE00E1DB76E3C00BFD856 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		185EE0111DB76E3C00BFD856 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		185EE0131DB76E3C00BFD856 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		185F4FF11DC1E3530068FB23 /* VingVBQuizViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VingVBQuizViewController.h; sourceTree = "<group>"; };
+		185F4FF21DC1E3530068FB23 /* VingVBQuizViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VingVBQuizViewController.m; sourceTree = "<group>"; };
+		185F4FF41DC1E3E30068FB23 /* VingVBHomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VingVBHomePageViewController.h; sourceTree = "<group>"; };
+		185F4FF51DC1E3E30068FB23 /* VingVBHomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VingVBHomePageViewController.m; sourceTree = "<group>"; };
+		185F4FF71DC1E62B0068FB23 /* VingVBResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VingVBResultViewController.h; sourceTree = "<group>"; };
+		185F4FF81DC1E62B0068FB23 /* VingVBResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VingVBResultViewController.m; sourceTree = "<group>"; };
+		185F4FFA1DC1E6B70068FB23 /* VingVBAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VingVBAboutViewController.h; sourceTree = "<group>"; };
+		185F4FFB1DC1E6B70068FB23 /* VingVBAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VingVBAboutViewController.m; sourceTree = "<group>"; };
+		185F50091DC87E7E0068FB23 /* vocaXML.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = vocaXML.xml; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		185EDFFC1DB76E3C00BFD856 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		185EDFF61DB76E3C00BFD856 = {
+			isa = PBXGroup;
+			children = (
+				185EE0011DB76E3C00BFD856 /* Vocabulary */,
+				185EE0001DB76E3C00BFD856 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		185EE0001DB76E3C00BFD856 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				185EDFFF1DB76E3C00BFD856 /* Vocabulary.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		185EE0011DB76E3C00BFD856 /* Vocabulary */ = {
+			isa = PBXGroup;
+			children = (
+				185F50091DC87E7E0068FB23 /* vocaXML.xml */,
+				185EE0051DB76E3C00BFD856 /* AppDelegate.h */,
+				185EE0061DB76E3C00BFD856 /* AppDelegate.m */,
+				185F4FF41DC1E3E30068FB23 /* VingVBHomePageViewController.h */,
+				185F4FF51DC1E3E30068FB23 /* VingVBHomePageViewController.m */,
+				182C0B7C1E388A3C00B1DA99 /* VingVBLoginViewController.h */,
+				182C0B7D1E388A3C00B1DA99 /* VingVBLoginViewController.m */,
+				185F4FF11DC1E3530068FB23 /* VingVBQuizViewController.h */,
+				185F4FF21DC1E3530068FB23 /* VingVBQuizViewController.m */,
+				185F4FF71DC1E62B0068FB23 /* VingVBResultViewController.h */,
+				185F4FF81DC1E62B0068FB23 /* VingVBResultViewController.m */,
+				185F4FFA1DC1E6B70068FB23 /* VingVBAboutViewController.h */,
+				185F4FFB1DC1E6B70068FB23 /* VingVBAboutViewController.m */,
+				185EE00B1DB76E3C00BFD856 /* Main.storyboard */,
+				185EE00E1DB76E3C00BFD856 /* Assets.xcassets */,
+				185EE0101DB76E3C00BFD856 /* LaunchScreen.storyboard */,
+				185EE0131DB76E3C00BFD856 /* Info.plist */,
+				185EE0021DB76E3C00BFD856 /* Supporting Files */,
+			);
+			path = Vocabulary;
+			sourceTree = "<group>";
+		};
+		185EE0021DB76E3C00BFD856 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				185EE0031DB76E3C00BFD856 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		185EDFFE1DB76E3C00BFD856 /* Vocabulary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 185EE0161DB76E3C00BFD856 /* Build configuration list for PBXNativeTarget "Vocabulary" */;
+			buildPhases = (
+				185EDFFB1DB76E3C00BFD856 /* Sources */,
+				185EDFFC1DB76E3C00BFD856 /* Frameworks */,
+				185EDFFD1DB76E3C00BFD856 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Vocabulary;
+			productName = Vocabulary;
+			productReference = 185EDFFF1DB76E3C00BFD856 /* Vocabulary.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		185EDFF71DB76E3C00BFD856 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Vingleo;
+				TargetAttributes = {
+					185EDFFE1DB76E3C00BFD856 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = EX2PTDBQWG;
+					};
+				};
+			};
+			buildConfigurationList = 185EDFFA1DB76E3C00BFD856 /* Build configuration list for PBXProject "Vocabulary" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 185EDFF61DB76E3C00BFD856;
+			productRefGroup = 185EE0001DB76E3C00BFD856 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				185EDFFE1DB76E3C00BFD856 /* Vocabulary */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		185EDFFD1DB76E3C00BFD856 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				185F500A1DC87E7E0068FB23 /* vocaXML.xml in Resources */,
+				185EE0121DB76E3C00BFD856 /* LaunchScreen.storyboard in Resources */,
+				185EE00F1DB76E3C00BFD856 /* Assets.xcassets in Resources */,
+				185EE00D1DB76E3C00BFD856 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		185EDFFB1DB76E3C00BFD856 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				182C0B7E1E388A3C00B1DA99 /* VingVBLoginViewController.m in Sources */,
+				185F4FF31DC1E3530068FB23 /* VingVBQuizViewController.m in Sources */,
+				185EE0071DB76E3C00BFD856 /* AppDelegate.m in Sources */,
+				185F4FFC1DC1E6B70068FB23 /* VingVBAboutViewController.m in Sources */,
+				185F4FF61DC1E3E30068FB23 /* VingVBHomePageViewController.m in Sources */,
+				185EE0041DB76E3C00BFD856 /* main.m in Sources */,
+				185F4FF91DC1E62B0068FB23 /* VingVBResultViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		185EE00B1DB76E3C00BFD856 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				185EE00C1DB76E3C00BFD856 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		185EE0101DB76E3C00BFD856 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				185EE0111DB76E3C00BFD856 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		185EE0141DB76E3C00BFD856 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		185EE0151DB76E3C00BFD856 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		185EE0171DB76E3C00BFD856 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EX2PTDBQWG;
+				INFOPLIST_FILE = Vocabulary/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Vingleo.Vocabulary;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		185EE0181DB76E3C00BFD856 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EX2PTDBQWG;
+				INFOPLIST_FILE = Vocabulary/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Vingleo.Vocabulary;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		185EDFFA1DB76E3C00BFD856 /* Build configuration list for PBXProject "Vocabulary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				185EE0141DB76E3C00BFD856 /* Debug */,
+				185EE0151DB76E3C00BFD856 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		185EE0161DB76E3C00BFD856 /* Build configuration list for PBXNativeTarget "Vocabulary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				185EE0171DB76E3C00BFD856 /* Debug */,
+				185EE0181DB76E3C00BFD856 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 185EDFF71DB76E3C00BFD856 /* Project object */;
+}
