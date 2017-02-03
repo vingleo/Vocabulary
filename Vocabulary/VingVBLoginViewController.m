@@ -95,8 +95,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString *username = [defaults stringForKey:@"registerUserNameKey"];
-    NSString *passWord = [defaults stringForKey:@"passWordKey"];
+//    NSString *username = [defaults stringForKey:@"registerUserNameKey"];
+//    NSString *passWord = [defaults stringForKey:@"passWordKey"];
+    NSArray *userInfo = [defaults objectForKey:@"userInfoKey"];
+    
+    NSString *username = [userInfo objectAtIndex:0];
+    NSString *passWord = [userInfo objectAtIndex:1];
+    
     _userNameTextField.text = username;
     _passwdTextField.text = passWord;
     
@@ -119,7 +124,7 @@
 
 - (IBAction)registerBtnFuc:(id)sender {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    if ([_userNameTextField.text isEqualToString:@""])  //([_passwdTextField.text isEqualToString:@""]) )
+    if ([_userNameTextField.text isEqualToString:@""]||[_passwdTextField.text isEqualToString:@""] ) //([_passwdTextField.text isEqualToString:@""]) )
     {
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Warning!" message:@"Please enter your name and password" preferredStyle:UIAlertControllerStyleAlert];
         
@@ -131,7 +136,7 @@
         
         NSMutableAttributedString *alertMessageStr = [[NSMutableAttributedString alloc] initWithString:@"Please enter your name and password"];
         [alertMessageStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:18] range:NSMakeRange(0,35)];
-        [alertMessageStr addAttribute:NSForegroundColorAttributeName value:[UIColor orangeColor] range:NSMakeRange(0, 35)];
+        [alertMessageStr addAttribute:NSForegroundColorAttributeName value:[UIColor blueColor] range:NSMakeRange(0, 35)];
         //可以指定不同的颜色
         //[alertMessageStr addAttribute:NSForegroundColorAttributeName value:[UIColor greenColor] range:NSMakeRange(16, 22)];
         //[alertMessageStr addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(23, 34)];
@@ -150,8 +155,10 @@
         
         
     } else {
+        [defaults setInteger:self.userID forKey:@"userIDKey"];
         [defaults setObject:_userNameTextField.text forKey: @"registerUserNameKey"];
         [defaults setObject:_passwdTextField.text forKey:@"passWordKey"];
+        self.userID ++;
         [defaults synchronize];
     }
     

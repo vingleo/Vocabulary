@@ -5,7 +5,8 @@
 //  Created by vingleo on 16/10/27.
 //  Copyright © 2016年 Vingleo. All rights reserved.
 //  Create Git function by Vingleo 2017.01.22
-//  Add change question function
+//  Add change question function 2017.01.26
+//  Add User status saving funciton by Vingleo 2017.02.03
 
 #import "VingVBQuizViewController.h"
 #import "VingVBResultViewController.h"
@@ -16,6 +17,7 @@
 
 @implementation VingVBQuizViewController
 @synthesize dictData,marrXMLData,mstrXMLString,mdictXMLPart;
+
 
 
 -(void)startParsing {
@@ -67,31 +69,98 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self startParsing];
+    
+    
     NSLog(@"mdictXMLPart count is %lu",(unsigned long)[mdictXMLPart count]);
 
     NSLog(@"marrXMLData array count is:%lu",(unsigned long)[marrXMLData count]);
     NSLog(@"marrXMLData array is %@",marrXMLData);
     
-    self.level1BaseLabel.text = [[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"level1Base"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-//    NSLog(@"level1BaseLabel text is : %@",self.level1BaseLabel);
-    self.level2BaseLabel.text = [[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"level2Base"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-//    NSLog(@"level1BaseLabe2 text is : %@",self.level2BaseLabel);
-    self.questionTypeLabel.text = [[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"questionType"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-//    NSLog(@"questionTypeLabel text is : %@",self.questionTypeLabel);
-    self.questionLabel.text = [[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"question"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-//    NSLog(@"questionLabel text is : %@", self.questionLabel);
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
+//    NSString *c_questionNumber = [defaults stringForKey:@"questionNumberKey"];
+//    NSString *c_questionIndexKeyText = [defaults stringForKey:@"questionIndexKeyTextKey"];
+//    NSString *c_level1BaseText = [defaults stringForKey:@"level1BaseTextKey"];
+//    NSString *c_level2BaseText = [defaults stringForKey:@"level2BaseTextKey"];
+//    NSString *c_questionTypeText = [defaults stringForKey:@"questionTypeTextKey"];
+//    NSString *c_questionText = [defaults stringForKey:@"questionTextKey"];
+//    NSString *c_answer1Text  = [defaults stringForKey:@"answer1TextKey"];
+//    NSString *c_answer2Text  = [defaults stringForKey:@"answer2TextKey"];
+//    NSString *c_answer3Text  = [defaults stringForKey:@"answer3TextKey"];
+//    NSString *c_correctAnswerText  = [defaults stringForKey:@"correctAnswerTextKey"];
+//    NSString *c_testWordText  = [defaults stringForKey:@"testWordTextKey"];
+//    NSString *c_hintText  = [defaults stringForKey:@"hintTextKey"];
+//    NSString *c_audioText  = [defaults stringForKey:@"audioTextKey"];
     
-    [_answer1Button setTitle:[[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"answer1"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] forState:UIControlStateNormal];
-//    NSLog(@"answer 1 is %@",self.answer1Button.titleLabel.text);
-    [_answer2Button setTitle:[[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"answer2"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] forState:UIControlStateNormal];
-    [_answer3Button setTitle:[[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"answer3"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] forState:UIControlStateNormal];
-    
-    _questionNumLbl.text = [NSString stringWithFormat:@"Question #%lu",_currentIndex+1];
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"currentIndexNumberKey"]==nil)
+    {
+        NSLog(@"hasRunBefore is false");
+        self.level1BaseLabel.text = [[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"level1Base"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        //    NSLog(@"level1BaseLabel text is : %@",self.level1BaseLabel);
+        self.level2BaseLabel.text = [[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"level2Base"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        //    NSLog(@"level1BaseLabe2 text is : %@",self.level2BaseLabel);
+        self.questionTypeLabel.text = [[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"questionType"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        //    NSLog(@"questionTypeLabel text is : %@",self.questionTypeLabel);
+        self.questionLabel.text = [[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"question"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        //    NSLog(@"questionLabel text is : %@", self.questionLabel);
+        
+        
+        [_answer1Button setTitle:[[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"answer1"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] forState:UIControlStateNormal];
+        //    NSLog(@"answer 1 is %@",self.answer1Button.titleLabel.text);
+        [_answer2Button setTitle:[[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"answer2"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] forState:UIControlStateNormal];
+        [_answer3Button setTitle:[[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"answer3"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] forState:UIControlStateNormal];
+        
+        _questionNumLbl.text = [NSString stringWithFormat:@"Question #%lu",_currentIndex+1];
+        
+        //_currentIndex = [_questionNumber intValue];
+        NSLog(@"currentIndex  is  %lu",(unsigned long)_currentIndex);
 
-    //_currentIndex = [_questionNumber intValue];
-    NSLog(@"currentIndex  is  %lu",(unsigned long)_currentIndex);
-    
+    } else {
+        if (!_currentIndex) {
+            _currentIndex = [defaults integerForKey:@"currentIndexNumberKey"];
+            
+            
+            self.level1BaseLabel.text = [[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"level1Base"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+            //    NSLog(@"level1BaseLabel text is : %@",self.level1BaseLabel);
+            self.level2BaseLabel.text = [[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"level2Base"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+            //    NSLog(@"level1BaseLabe2 text is : %@",self.level2BaseLabel);
+            self.questionTypeLabel.text = [[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"questionType"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+            //    NSLog(@"questionTypeLabel text is : %@",self.questionTypeLabel);
+            self.questionLabel.text = [[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"question"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+            //    NSLog(@"questionLabel text is : %@", self.questionLabel);
+            
+            
+            [_answer1Button setTitle:[[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"answer1"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] forState:UIControlStateNormal];
+            //    NSLog(@"answer 1 is %@",self.answer1Button.titleLabel.text);
+            [_answer2Button setTitle:[[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"answer2"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] forState:UIControlStateNormal];
+            [_answer3Button setTitle:[[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"answer3"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] forState:UIControlStateNormal];
+            
+            _questionNumLbl.text = [NSString stringWithFormat:@"Question #%lu",_currentIndex+1];
+            
+            //_currentIndex = [_questionNumber intValue];
+            NSLog(@"currentIndex  is  %lu",(unsigned long)_currentIndex);
+        } else{
+            self.level1BaseLabel.text = [[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"level1Base"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+            //    NSLog(@"level1BaseLabel text is : %@",self.level1BaseLabel);
+            self.level2BaseLabel.text = [[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"level2Base"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+            //    NSLog(@"level1BaseLabe2 text is : %@",self.level2BaseLabel);
+            self.questionTypeLabel.text = [[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"questionType"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+            //    NSLog(@"questionTypeLabel text is : %@",self.questionTypeLabel);
+            self.questionLabel.text = [[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"question"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+            //    NSLog(@"questionLabel text is : %@", self.questionLabel);
+            
+            
+            [_answer1Button setTitle:[[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"answer1"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] forState:UIControlStateNormal];
+            //    NSLog(@"answer 1 is %@",self.answer1Button.titleLabel.text);
+            [_answer2Button setTitle:[[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"answer2"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] forState:UIControlStateNormal];
+            [_answer3Button setTitle:[[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"answer3"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] forState:UIControlStateNormal];
+            
+            _questionNumLbl.text = [NSString stringWithFormat:@"Question #%lu",_currentIndex+1];
+            
+            //_currentIndex = [_questionNumber intValue];
+            NSLog(@"currentIndex  is  %lu",(unsigned long)_currentIndex);
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -144,7 +213,7 @@
         //12_hintText = [[[marrXMLData objectAtIndex:[_questionNumber intValue]]valueForKey:@"hint"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
         _hintText = [[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"hint"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
         
-        //_audioText = [[[marrXMLData objectAtIndex:[_questionNumber intValue]]valueForKey:@"audio"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        //13_audioText = [[[marrXMLData objectAtIndex:[_questionNumber intValue]]valueForKey:@"audio"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
         _audioText = [[[marrXMLData objectAtIndex:_currentIndex]valueForKey:@"audio"]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
         
         resultView.detailModal = @[_correctAnswerText,_userChooseText,_level1BaseText];
@@ -166,16 +235,29 @@
 }
 
 - (IBAction)getBackMainPage:(id)sender {
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Warning!" message:@"Are you sure to leave this test?" preferredStyle:UIAlertControllerStyleAlert];
+    //Save user current status
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+
+    
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Save or Leave?" message:@"Do you want save Or leave?" preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
     [alert addAction:cancelAction];
     
-    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"I'm sure." style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *saveAction = [UIAlertAction actionWithTitle:@"Save" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
         
         [self performSegueWithIdentifier:@"back2main" sender:self];
         
+        [defaults setInteger:_currentIndex forKey:@"currentIndexNumberKey"];
+        
+        [defaults synchronize];
+        NSLog(@"User Status saved.");
+        NSString *app_path = [NSHomeDirectory() stringByAppendingString:@"/Documents"];
+        NSLog(@"APP_Path = %@", app_path);
+        
         //for get Documents folder
+        /*
         NSFileManager *fileManager = [[NSFileManager alloc]init];
         NSArray *urls = [fileManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask];
         if ([urls count]>0) {
@@ -188,8 +270,9 @@
         
         NSString *tempDirectory = NSTemporaryDirectory();
         NSLog(@"Temp Directory = %@",tempDirectory);
-        
+        */
         //Add String to text file
+        /*
         NSString *someText  = @"Random string that won't be backed up.";
         
         NSString *destinationPath = [NSTemporaryDirectory() stringByAppendingPathComponent:@"MyFile.txt"];
@@ -201,13 +284,35 @@
         } else {
             NSLog(@"Failed to store the file. Error = %@",error);
         }
+        */
         
-        
-        
-        NSLog(@"User Status saved.");
     }];
     
-    [alert addAction:okAction];
+    [alert addAction:saveAction];
+    
+    //notSaveAction
+        UIAlertAction *notSaveAction = [UIAlertAction actionWithTitle:@"Leave anyway." style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        
+        [self performSegueWithIdentifier:@"back2main" sender:self];
+        _currentIndex = 0;
+        [defaults setInteger:_currentIndex forKey:@"currentIndexNumberKey"];
+            NSString *tempUsername = [defaults stringForKey:@"registerUserNameKey"];
+            NSString *tempPassWord = [defaults stringForKey:@"passWordKey"];
+            NSArray *userInfo = [NSArray arrayWithObjects:tempUsername,tempPassWord,_currentIndex, nil];
+            [defaults setObject:userInfo forKey:@"userInfoKey"];
+        
+        
+        
+        [defaults synchronize];
+        NSLog(@"User Status saved.");
+        NSString *app_path = [NSHomeDirectory() stringByAppendingString:@"/Documents"];
+        NSLog(@"APP_Path = %@", app_path);
+        
+    }];
+    
+    [alert addAction:notSaveAction];
+    
+    
     [self presentViewController:alert animated:YES completion:nil];
     
     

@@ -63,17 +63,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INA-Z7-QPI">
-                                <rect key="frame" x="112" y="561" width="191" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="6Cj-dN-k93"/>
-                                </constraints>
+                                <rect key="frame" x="76" y="299" width="277" height="30"/>
                                 <state key="normal" title="Lonin"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="S7s-61-qzu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ck-RF-AND">
-                                <rect key="frame" x="125" y="615" width="178" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="rqe-nQ-zC1"/>
-                                </constraints>
+                                <rect key="frame" x="129" y="337" width="170" height="30"/>
                                 <state key="normal" title="Register"/>
                                 <connections>
                                     <action selector="registerBtnFuc:" destination="qf3-6k-cwL" eventType="touchUpInside" id="Htt-Ek-2gJ"/>
@@ -82,25 +79,25 @@
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="0ck-RF-AND" secondAttribute="trailing" constant="111" id="2Ec-a1-bQF"/>
                             <constraint firstItem="3yW-Zp-XBm" firstAttribute="top" secondItem="ERe-xH-hOt" secondAttribute="bottom" constant="50" id="3pM-AU-bJG"/>
+                            <constraint firstItem="INA-Z7-QPI" firstAttribute="centerX" secondItem="0ck-RF-AND" secondAttribute="centerX" id="4cm-yG-CcU"/>
                             <constraint firstItem="II6-zU-bQA" firstAttribute="leading" secondItem="Unp-vy-G18" secondAttribute="leading" id="5bv-hp-Rq8"/>
                             <constraint firstItem="Unp-vy-G18" firstAttribute="top" secondItem="II6-zU-bQA" secondAttribute="bottom" constant="46" id="6uA-nO-Kkm"/>
-                            <constraint firstItem="0ck-RF-AND" firstAttribute="top" secondItem="INA-Z7-QPI" secondAttribute="bottom" constant="24" id="9bM-6C-yiH"/>
+                            <constraint firstItem="INA-Z7-QPI" firstAttribute="leading" secondItem="Hyt-wp-sVB" secondAttribute="leadingMargin" constant="56" id="7Kg-TI-Pm2"/>
                             <constraint firstItem="3yW-Zp-XBm" firstAttribute="leading" secondItem="Hyt-wp-sVB" secondAttribute="leading" constant="20" id="EeS-zw-dHD"/>
-                            <constraint firstItem="MZ0-Cg-wV6" firstAttribute="top" secondItem="0ck-RF-AND" secondAttribute="bottom" constant="91" id="EfC-52-F5j"/>
                             <constraint firstItem="2Dl-oQ-1eM" firstAttribute="top" secondItem="KZG-Hd-RO8" secondAttribute="bottom" id="FWh-k5-OnD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0ck-RF-AND" secondAttribute="trailing" constant="95" id="H2L-xQ-oCP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="INA-Z7-QPI" secondAttribute="trailing" constant="41" id="HlX-J2-aJq"/>
                             <constraint firstItem="II6-zU-bQA" firstAttribute="leading" secondItem="ERe-xH-hOt" secondAttribute="trailing" constant="-87" id="NW1-Ah-Pc6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="II6-zU-bQA" secondAttribute="trailing" id="ODP-d4-b0P"/>
-                            <constraint firstAttribute="trailing" secondItem="INA-Z7-QPI" secondAttribute="trailing" constant="111" id="Rce-Xk-xOy"/>
+                            <constraint firstItem="0ck-RF-AND" firstAttribute="top" secondItem="INA-Z7-QPI" secondAttribute="bottom" constant="8" symbolic="YES" id="QGD-S6-nqs"/>
                             <constraint firstItem="ERe-xH-hOt" firstAttribute="leading" secondItem="3yW-Zp-XBm" secondAttribute="leading" id="T6E-my-ekr"/>
                             <constraint firstItem="II6-zU-bQA" firstAttribute="top" secondItem="KZG-Hd-RO8" secondAttribute="bottom" constant="149" id="UTc-yK-QIM"/>
-                            <constraint firstItem="INA-Z7-QPI" firstAttribute="leading" secondItem="Hyt-wp-sVB" secondAttribute="leading" constant="112" id="anB-Xr-ANj"/>
                             <constraint firstItem="ERe-xH-hOt" firstAttribute="top" secondItem="2Dl-oQ-1eM" secondAttribute="bottom" constant="77" id="bX0-8O-fQ4"/>
                             <constraint firstItem="Unp-vy-G18" firstAttribute="leading" secondItem="3yW-Zp-XBm" secondAttribute="trailing" constant="-98" id="h3k-JE-SWR"/>
+                            <constraint firstItem="INA-Z7-QPI" firstAttribute="top" secondItem="Unp-vy-G18" secondAttribute="bottom" constant="24" id="jsb-0d-zNL"/>
                             <constraint firstItem="3yW-Zp-XBm" firstAttribute="top" secondItem="Unp-vy-G18" secondAttribute="top" constant="-38" id="k2l-Gh-HqG"/>
                             <constraint firstItem="2Dl-oQ-1eM" firstAttribute="leading" secondItem="Hyt-wp-sVB" secondAttribute="leading" constant="20" id="nvc-S8-4GP"/>
-                            <constraint firstItem="0ck-RF-AND" firstAttribute="leading" secondItem="Hyt-wp-sVB" secondAttribute="leading" constant="125" id="q60-fc-udg"/>
                             <constraint firstItem="II6-zU-bQA" firstAttribute="trailing" secondItem="Unp-vy-G18" secondAttribute="trailing" id="tie-FC-fwj"/>
                         </constraints>
                     </view>
@@ -753,8 +750,8 @@
         <image name="LaunchIcon2" width="235" height="176"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="TWZ-Hy-JJ3"/>
         <segue reference="B2d-T1-RXR"/>
-        <segue reference="hSQ-06-Dwe"/>
+        <segue reference="TWZ-Hy-JJ3"/>
+        <segue reference="S7s-61-qzu"/>
     </inferredMetricsTieBreakers>
 </document>
