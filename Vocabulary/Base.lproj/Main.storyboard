@@ -59,7 +59,7 @@
                                 </constraints>
                                 <state key="normal" title="Back"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="0ud-Nh-Bnp"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="backMainView" id="0ud-Nh-Bnp"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INA-Z7-QPI">
@@ -753,8 +753,8 @@
         <image name="LaunchIcon2" width="235" height="176"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="TWZ-Hy-JJ3"/>
         <segue reference="B2d-T1-RXR"/>
-        <segue reference="hSQ-06-Dwe"/>
+        <segue reference="TWZ-Hy-JJ3"/>
+        <segue reference="0ud-Nh-Bnp"/>
     </inferredMetricsTieBreakers>
 </document>
