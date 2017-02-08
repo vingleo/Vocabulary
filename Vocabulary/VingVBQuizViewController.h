@@ -10,7 +10,7 @@
 
 @interface VingVBQuizViewController : UIViewController<NSXMLParserDelegate>
 
-@property NSUInteger currentIndex;
+@property NSInteger currentIndex;
 
 @property(nonatomic,strong)NSMutableDictionary *dictData;
 @property(nonatomic,strong)NSMutableArray *marrXMLData;
