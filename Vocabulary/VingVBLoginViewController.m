@@ -10,7 +10,7 @@
 #import <CommonCrypto/CommonDigest.h>
 
 
-@interface VingVBLoginViewController ()
+@interface VingVBLoginViewController  () <UITextFieldDelegate>
 
 @end
 
@@ -94,13 +94,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _userNameTextField.delegate = self;
+    _passwdTextField.delegate = self;
     
-    
-    
+    //Retrive all users
     _allUsersArray = [[NSMutableArray alloc]init];
-
-    
-    
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 //    NSString *username = [defaults stringForKey:@"registerUserNameKey"];
@@ -160,6 +158,9 @@
 */
 
 - (IBAction)registerBtnFuc:(id)sender {
+    
+    
+    
     //NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     //NSString  *userArrayKey = [NSString stringWithFormat:@"userArrayKey%ld",(long)_currentTag];
@@ -236,14 +237,46 @@
           }
         else {
             //判断是否和现有用户重复 逻辑3
+            //Retrive all users
+            _allUsersArray = [[NSMutableArray alloc]init];
+            
             NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+            //    NSString *username = [defaults stringForKey:@"registerUserNameKey"];
+            //    NSString *passWord = [defaults stringForKey:@"passWordKey"];
             _lastTag = [defaults integerForKey:@"lastTagKey"];
+            //NSLog(@"ViewDidLoad lastTag is %ld",(long)_lastTag);
+            //NSString  *userArrayKey = [NSString stringWithFormat:@"userArrayKey%ld",(long)_lastTag];
+            //NSArray *currentUserArray = [defaults objectForKey:userArrayKey];
+            
+            //NSString *username = [currentUserArray objectAtIndex:0];
+            //NSString *passWord = [currentUserArray objectAtIndex:1];
+            
+            if(_lastTag) {
+                //_userNameTextField.text = username;
+                //_passwdTextField.text = passWord;
+                
+                //Get all users
+                for (NSInteger i = 1; i<= _lastTag; i++) {
+                    NSLog(@"This is User%ld",(long)i);
+                    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+                    
+                    
+                    NSString  *userArrayKey = [NSString stringWithFormat:@"userArrayKey%ld",(long)i];
+                    NSArray *currentUserArray = [defaults objectForKey:userArrayKey];
+                    NSString *currentUser = [currentUserArray objectAtIndex:0];
+                    [_allUsersArray addObject:currentUser];
+                    NSLog(@"View did Load all Users is : %@",_allUsersArray);
+                    
+                }
+            }
+
+            
+            
+            
+            
+            //_lastTag = [defaults integerForKey:@"lastTagKey"];
             //判断是否存在UserDefaults文件
             if (_lastTag) {
-                
-                
-
-                
                 
                     //NSArray *array = [defaults objectForKey:userArrayKey];
                     //NSString *user = [array objectAtIndex:0];
@@ -289,11 +322,15 @@
                     
                     [defaults setObject:currentUserArray forKey:userArrayKey];
                     [defaults setInteger:_lastTag forKey:@"lastTagKey"];
-                    
-                    
+                    [_allUsersArray  addObject:_userNameTextField.text];
                     [defaults synchronize];
-                    _passwdTextField.text = [currentUserArray objectAtIndex:0];
+                    NSLog(@"Add User Successful.");
+                    
+                    //Clear user message box ;
+                    _userNameTextField.text = [currentUserArray objectAtIndex:0];
                     _passwdTextField.text = [currentUserArray objectAtIndex:1];
+//                    _userNameTextField.text = @"";
+//                    _passwdTextField.text = @"";
                 }
                 
                 }
@@ -331,4 +368,19 @@
         
     }
 }
+
+#pragma -- Dismiss Text Filed
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    UITouch *touch = [touches anyObject];
+    if (![touch.view isKindOfClass:[UITextField class]]||[touch.view isKindOfClass:[UITextView class]]) {
+        [self.view endEditing:YES];
+    }
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return  YES;
+}
+
+
 @end
