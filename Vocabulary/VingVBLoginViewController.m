@@ -94,10 +94,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    
+    _allUsersArray = [[NSMutableArray alloc]init];
+
+    
+    
+    
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 //    NSString *username = [defaults stringForKey:@"registerUserNameKey"];
 //    NSString *passWord = [defaults stringForKey:@"passWordKey"];
     _lastTag = [defaults integerForKey:@"lastTagKey"];
+    NSLog(@"ViewDidLoad lastTag is %ld",(long)_lastTag);
     NSString  *userArrayKey = [NSString stringWithFormat:@"userArrayKey%ld",(long)_lastTag];
     NSArray *currentUserArray = [defaults objectForKey:userArrayKey];
     
@@ -107,14 +116,28 @@
     if(_lastTag) {
         _userNameTextField.text = username;
         _passwdTextField.text = passWord;
+        
+        //Get all users
+        for (NSInteger i = 1; i<= _lastTag; i++) {
+            NSLog(@"This is User%ld",(long)i);
+            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+            
+            
+            NSString  *userArrayKey = [NSString stringWithFormat:@"userArrayKey%ld",(long)i];
+            NSArray *currentUserArray = [defaults objectForKey:userArrayKey];
+            NSString *currentUser = [currentUserArray objectAtIndex:0];
+            [_allUsersArray addObject:currentUser];
+            NSLog(@"View did Load all Users is : %@",_allUsersArray);
+
+        }
+
 
     } else {
         _userNameTextField.text = @"";
         _passwdTextField.text = @"";
-        //_lastTag = 0;
+        _lastTag = 1;
     }
-    
-    NSLog(@"View Did Load lastTagKey is %ld",_lastTag);
+
     NSLog(@"View Did Load username is %@",username);
     NSLog(@"View Did Load passWord is %@",passWord);
 
@@ -149,7 +172,7 @@
     //NSLog(@"***********This is currentUser:%@",currentUser);
     
     
-    //判断用户名为空BOOL 1
+    //判断用户名为空——逻辑1
     if ([_userNameTextField.text isEqualToString:@""]) //([_passwdTextField.text isEqualToString:@""]) )
     {
         
@@ -182,7 +205,7 @@
         
         
     } else {
-        //判断密码为空 BOOL 2
+        //判断密码为空——逻辑2
         if ([_passwdTextField.text isEqualToString:@""] ) {
             UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Warning!" message:@"Please enter your password" preferredStyle:UIAlertControllerStyleAlert];
             
@@ -212,29 +235,33 @@
             [self presentViewController:alert animated:YES completion:nil];
           }
         else {
-            //判断是否和现有用户重复 BOOL 3
+            //判断是否和现有用户重复 逻辑3
             NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
             _lastTag = [defaults integerForKey:@"lastTagKey"];
-
             //判断是否存在UserDefaults文件
             if (_lastTag) {
-                for (int i=1; i<=_lastTag; i++)
+                
+                
+
+                
+                
+                    //NSArray *array = [defaults objectForKey:userArrayKey];
+                    //NSString *user = [array objectAtIndex:0];
+                    //NSLog(@"Inside loop user is %@",user);
+                    //NSMutableArray *allUsersArray=[[NSMutableArray alloc]init];
                     
-                {
-                    
-                    
-                    NSString  *userArrayKey = [NSString stringWithFormat:@"userArrayKey%d",i];
-                    NSArray *array = [defaults objectForKey:userArrayKey];
-                    NSString *user = [array objectAtIndex:0];
-                    NSLog(@"Inside loop user is %@",user);
-                    NSMutableArray *allUsersArray=[[NSMutableArray alloc]init];
-                    
-                    [allUsersArray addObject:user];
-                    NSLog(@"Inside loop allUsersArray is %@",allUsersArray);
+                    //[allUsersArray addObject:user];
+                    //NSLog(@"Inside loop allUsersArray is %@",allUsersArray);
                     
                     //if([allUsersArray containsObject:_userNameTextField.text])
-                    if([allUsersArray containsObject:_userNameTextField.text]                                                                                                                                                                                                                                                                                                                                  )
+                
+                    //Check allUserArray include userNameField.text
+                //NSLog(@"判断是否和现有用户重复 BOOL 3. allUserArray is:%@",_allUsersArray);
+                
+                //判断是否在现有用户列表array中
+                if([_allUsersArray containsObject:_userNameTextField.text])
                     {
+                        NSLog(@"存在已有用户");
                         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Warning!" message:@"User Exists, Please change name" preferredStyle:UIAlertControllerStyleAlert];
                         //alernate messge and title color
                         NSMutableAttributedString *alertTitleStr = [[NSMutableAttributedString alloc] initWithString:@"Warning"];
@@ -250,17 +277,26 @@
                         UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
                         [alert addAction:cancelAction];
                         [self presentViewController:alert animated:YES completion:nil];
-                        //[self performSegueWithIdentifier:@"backMainView" sender:self];
-                        
+                        [self performSegueWithIdentifier:@"backMainView" sender:self];
                     }
+                //不存在已有用户
+                else{
+                    NSLog(@"不存在已有用户");
+                    _lastTag ++;
+                    NSString  *userArrayKey = [NSString stringWithFormat:@"userArrayKey%ld",(long)_lastTag];
+                    NSArray *currentUserArray = [NSArray arrayWithObjects:_userNameTextField.text,_passwdTextField.text, nil];
+                    //NSLog(@"After currentUserArray is %@",currentUserArray);
                     
+                    [defaults setObject:currentUserArray forKey:userArrayKey];
+                    [defaults setInteger:_lastTag forKey:@"lastTagKey"];
+                    
+                    
+                    [defaults synchronize];
+                    _passwdTextField.text = [currentUserArray objectAtIndex:0];
+                    _passwdTextField.text = [currentUserArray objectAtIndex:1];
                 }
                 
-                
-                
-                
-            }
-            
+                }
             
             //UserDefaults file doesn't exist.
             else {
@@ -268,24 +304,28 @@
                 NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
                 
                 _lastTag = [defaults integerForKey:@"lastTagKey"];
-                NSLog(@"After lastTag is %ld",_lastTag);
+                _lastTag = 1;
+                //NSLog(@"After lastTag is %ld",_lastTag);
                 
-                NSString  *userArrayKey = [NSString stringWithFormat:@"userArrayKey%ld",(long)_lastTag+1];
+                NSString  *userArrayKey = [NSString stringWithFormat:@"userArrayKey%ld",(long)_lastTag];
                 
                 NSArray *currentUserArray = [NSArray arrayWithObjects:_userNameTextField.text,_passwdTextField.text, nil];
                 NSLog(@"After currentUserArray is %@",currentUserArray);
                 
                 [defaults setObject:currentUserArray forKey:userArrayKey];
-                [defaults setInteger:_lastTag+1 forKey:@"lastTagKey"];
+                [defaults setInteger:_lastTag forKey:@"lastTagKey"];
                 
                 
                 [defaults synchronize];
                 _passwdTextField.text = [currentUserArray objectAtIndex:0];
                 _passwdTextField.text = [currentUserArray objectAtIndex:1];
-                _lastTag ++;
-
+                //_lastTag ++;
+                
                 
             }
+            
+            
+            
 
         }
         

@@ -19,8 +19,7 @@
 @property NSInteger userID;
 @property NSInteger lastTag;
 
-
-
+@property NSMutableArray *allUsersArray;
 
 - (IBAction)registerBtnFuc:(id)sender;
 
