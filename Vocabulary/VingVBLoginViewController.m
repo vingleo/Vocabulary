@@ -8,7 +8,7 @@
 
 #import "VingVBLoginViewController.h"
 #import <CommonCrypto/CommonDigest.h>
-
+#import "VingVBHomePageViewController.h"
 
 @interface VingVBLoginViewController  () <UITextFieldDelegate>
 
@@ -92,8 +92,52 @@
 }
 */
 
+
+-(void)didChangeValueForKey:(NSString *)key{
+    if (_signSegment.selectedSegmentIndex==0) {
+        _signInButton.hidden = false;
+        _signUpButton.hidden = true;
+        
+    } else {
+        _signInButton.hidden = false;
+        _signUpButton.hidden = true;
+        
+    }
+
+}
+
+//Segment delegate methods
+-(void)segmentAction:(UISegmentedControl *)mySeg{
+    if (mySeg.selectedSegmentIndex==0) {
+        _signInButton.hidden = true;
+        _signUpButton.hidden = false;
+        
+    } else {
+        _signInButton.hidden = false;
+        _signUpButton.hidden = true;
+        
+    }
+
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //Check loginSgement Sign in or Sign up
+    if (_signSegment.selectedSegmentIndex==0) {
+        _signInButton.hidden = false;
+        _signUpButton.hidden = true;
+        
+    } else {
+        _signInButton.hidden = false;
+        _signUpButton.hidden = true;
+
+    }
+    //Add segement delegate methods Action
+    [_signSegment addTarget:self action:@selector(segmentAction:)forControlEvents:UIControlEventValueChanged];
+    
+    
+    
     _userNameTextField.delegate = self;
     _passwdTextField.delegate = self;
     
@@ -326,11 +370,19 @@
                     [defaults synchronize];
                     NSLog(@"Add User Successful.");
                     
+                    //Pop up add user successful message
+                    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Congratulations!" message:@"Register User Success." preferredStyle:UIAlertControllerStyleAlert];
+                    UIAlertAction *OKAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
+                    [alert addAction:OKAction];
+                    [self presentViewController:alert animated:YES completion:nil];
+
+                    
+                    
                     //Clear user message box ;
-                    _userNameTextField.text = [currentUserArray objectAtIndex:0];
-                    _passwdTextField.text = [currentUserArray objectAtIndex:1];
-//                    _userNameTextField.text = @"";
-//                    _passwdTextField.text = @"";
+//                    _userNameTextField.text = [currentUserArray objectAtIndex:0];
+//                    _passwdTextField.text = [currentUserArray objectAtIndex:1];
+                    _userNameTextField.text = @"";
+                    _passwdTextField.text = @"";
                 }
                 
                 }
@@ -369,7 +421,43 @@
     }
 }
 
-#pragma -- Dismiss Text Filed
+- (IBAction)loginBtnFuc:(id)sender {
+    //
+    
+    
+    
+    
+    //[self performSegueWithIdentifier:@"signInBack2HomePage" sender:self];
+
+    
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    
+    if ([[segue identifier] isEqualToString:@"signInBack2HomePage"]) {
+        VingVBHomePageViewController  *homeView = [segue destinationViewController];
+        
+        //Get currentUserName
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        NSString  *userArrayKey = [NSString stringWithFormat:@"userArrayKey%ld",(long)_lastTag];
+        NSArray *currentUserArray = [defaults objectForKey:userArrayKey];
+        
+        NSString *username = [NSString stringWithFormat:@"%@,Wecome!", [currentUserArray objectAtIndex:0]];
+        
+        homeView.currentUsername = username;
+    }
+    
+    
+    
+}
+
+
+
+
+
+#pragma mark-- Dismiss Text Filed
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     UITouch *touch = [touches anyObject];
     if (![touch.view isKindOfClass:[UITextField class]]||[touch.view isKindOfClass:[UITextView class]]) {

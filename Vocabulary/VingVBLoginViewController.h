@@ -20,7 +20,11 @@
 @property NSInteger lastTag;
 
 @property NSMutableArray *allUsersArray;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *signSegment;
+@property (weak, nonatomic) IBOutlet UIButton *signInButton;
+@property (weak, nonatomic) IBOutlet UIButton *signUpButton;
 
 - (IBAction)registerBtnFuc:(id)sender;
+- (IBAction)loginBtnFuc:(id)sender;
 
 @end

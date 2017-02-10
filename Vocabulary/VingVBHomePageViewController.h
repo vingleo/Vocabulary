@@ -10,4 +10,9 @@
 
 @interface VingVBHomePageViewController : UIViewController
 
+@property(weak,nonatomic) NSString *currentUsername;
+
+@property (weak, nonatomic) IBOutlet UILabel *currentUserLabel;
+
+
 @end
