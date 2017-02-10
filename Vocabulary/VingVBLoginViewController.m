@@ -123,16 +123,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //Check loginSgement Sign in or Sign up
-    if (_signSegment.selectedSegmentIndex==0) {
+    //Default show Sign in
+    _signSegment.selectedSegmentIndex=1;
         _signInButton.hidden = false;
         _signUpButton.hidden = true;
         
-    } else {
-        _signInButton.hidden = false;
-        _signUpButton.hidden = true;
-
-    }
+    
     //Add segement delegate methods Action
     [_signSegment addTarget:self action:@selector(segmentAction:)forControlEvents:UIControlEventValueChanged];
     
@@ -201,6 +197,7 @@
 }
 */
 
+#pragma mark-- Sign in & Sign up Button function
 - (IBAction)registerBtnFuc:(id)sender {
     
     
