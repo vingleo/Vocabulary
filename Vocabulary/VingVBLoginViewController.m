@@ -292,6 +292,8 @@
             //NSString *username = [currentUserArray objectAtIndex:0];
             //NSString *passWord = [currentUserArray objectAtIndex:1];
             
+            //判断是否存在UserDefaults文件
+            //存在UserDefaults文件
             if(_lastTag) {
                 //_userNameTextField.text = username;
                 //_passwdTextField.text = passWord;
@@ -307,33 +309,8 @@
                     NSString *currentUser = [currentUserArray objectAtIndex:0];
                     [_allUsersArray addObject:currentUser];
                     NSLog(@"View did Load all Users is : %@",_allUsersArray);
-                    
-                }
-            }
-
-            
-            
-            
-            
-            //_lastTag = [defaults integerForKey:@"lastTagKey"];
-            //判断是否存在UserDefaults文件
-            if (_lastTag) {
-                
-                    //NSArray *array = [defaults objectForKey:userArrayKey];
-                    //NSString *user = [array objectAtIndex:0];
-                    //NSLog(@"Inside loop user is %@",user);
-                    //NSMutableArray *allUsersArray=[[NSMutableArray alloc]init];
-                    
-                    //[allUsersArray addObject:user];
-                    //NSLog(@"Inside loop allUsersArray is %@",allUsersArray);
-                    
-                    //if([allUsersArray containsObject:_userNameTextField.text])
-                
-                    //Check allUserArray include userNameField.text
-                //NSLog(@"判断是否和现有用户重复 BOOL 3. allUserArray is:%@",_allUsersArray);
-                
-                //判断是否在现有用户列表array中
-                if([_allUsersArray containsObject:_userNameTextField.text])
+                    //判断是否在现有用户列表array中
+                    if([_allUsersArray containsObject:_userNameTextField.text])
                     {
                         NSLog(@"存在已有用户");
                         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Warning!" message:@"User Exists, Please change name" preferredStyle:UIAlertControllerStyleAlert];
@@ -353,37 +330,37 @@
                         [self presentViewController:alert animated:YES completion:nil];
                         //[self performSegueWithIdentifier:@"backMainView" sender:self];
                     }
-                //不存在已有用户
-                else{
-                    NSLog(@"不存在已有用户");
-                    _lastTag ++;
-                    NSString  *userArrayKey = [NSString stringWithFormat:@"userArrayKey%ld",(long)_lastTag];
-                    NSArray *currentUserArray = [NSArray arrayWithObjects:_userNameTextField.text,_passwdTextField.text, nil];
-                    //NSLog(@"After currentUserArray is %@",currentUserArray);
-                    
-                    [defaults setObject:currentUserArray forKey:userArrayKey];
-                    [defaults setInteger:_lastTag forKey:@"lastTagKey"];
-                    [_allUsersArray  addObject:_userNameTextField.text];
-                    [defaults synchronize];
-                    NSLog(@"Add User Successful.");
-                    
-                    //Pop up add user successful message
-                    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Congratulations!" message:@"Register User Success." preferredStyle:UIAlertControllerStyleAlert];
-                    UIAlertAction *OKAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
-                    [alert addAction:OKAction];
-                    [self presentViewController:alert animated:YES completion:nil];
-
-                    
-                    
-                    //Clear user message box ;
-//                    _userNameTextField.text = [currentUserArray objectAtIndex:0];
-//                    _passwdTextField.text = [currentUserArray objectAtIndex:1];
-                    _userNameTextField.text = @"";
-                    _passwdTextField.text = @"";
+                    //不存在已有用户
+                    else{
+                        NSLog(@"不存在已有用户");
+                        _lastTag ++;
+                        NSString  *userArrayKey = [NSString stringWithFormat:@"userArrayKey%ld",(long)_lastTag];
+                        NSArray *currentUserArray = [NSArray arrayWithObjects:_userNameTextField.text,_passwdTextField.text, nil];
+                        //NSLog(@"After currentUserArray is %@",currentUserArray);
+                        
+                        [defaults setObject:currentUserArray forKey:userArrayKey];
+                        [defaults setInteger:_lastTag forKey:@"lastTagKey"];
+                        [_allUsersArray  addObject:_userNameTextField.text];
+                        [defaults synchronize];
+                        NSLog(@"Add User Successful.");
+                        
+                        //Pop up add user successful message
+                        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Congratulations!" message:@"Register User Success." preferredStyle:UIAlertControllerStyleAlert];
+                        UIAlertAction *OKAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
+                        [alert addAction:OKAction];
+                        [self presentViewController:alert animated:YES completion:nil];
+                        
+                        
+                        
+                        //Clear user message box ;
+                        //                    _userNameTextField.text = [currentUserArray objectAtIndex:0];
+                        //                    _passwdTextField.text = [currentUserArray objectAtIndex:1];
+                        _userNameTextField.text = @"";
+                        _passwdTextField.text = @"";
+                    }
                 }
-                
-                }
-            
+            }
+            //不存在UserDefaults文件
             //UserDefaults file doesn't exist.
             else {
                 //设lastTag
@@ -403,15 +380,18 @@
                 
                 
                 [defaults synchronize];
-                _passwdTextField.text = [currentUserArray objectAtIndex:0];
+                _userNameTextField.text = [currentUserArray objectAtIndex:0];
                 _passwdTextField.text = [currentUserArray objectAtIndex:1];
                 //_lastTag ++;
                 
+                //Pop up add user successful message
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Congratulations!" message:@"Register User Success." preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertAction *OKAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
+                [alert addAction:OKAction];
+                [self presentViewController:alert animated:YES completion:nil];
+                
                 
             }
-            
-            
-            
 
         }
         
@@ -557,14 +537,12 @@
                         //                    [alertMessageStr addAttribute:NSForegroundColorAttributeName value:[UIColor blueColor] range:NSMakeRange(0, 16)];
                         //                    [alert setValue:alertMessageStr forKey:@"attributedMessage"];
                         
-                        //check password is correct
-                        
-                        
-                        
-                        
-                        
                         UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
                             [self performSegueWithIdentifier:@"signInBack2HomePage" sender:self];
+                            
+                        //将当前帐号写入NSDefault
+                            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+                            [defaults setObject:_userNameTextField.text forKey:@"currentUserKey"];
                             
                         }];
                         [alert addAction:okAction];
@@ -577,15 +555,14 @@
                         
                         
                     } else {
-                        //passwrd is correct ,Alert
+                        //passwrd isn't  correct ,Alert
                         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Error!" message:@"Password doesn't match,please try again." preferredStyle:UIAlertControllerStyleAlert];
                         UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
                         [alert addAction:okAction];
                         [self presentViewController:alert animated:YES completion:nil];
                         _passwdTextField.text = @"";
                         
-                        
-                                            }
+                          }
 
                     
                     

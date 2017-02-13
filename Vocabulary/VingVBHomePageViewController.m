@@ -16,12 +16,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
     if (_currentUsername) {
         _currentUserLabel.text = [NSString stringWithFormat:@"Welcome , %@",_currentUsername];
 
     } else{
-        _currentUserLabel.text = @"Please Sign in.";
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+            _currentUsername = [defaults stringForKey:@"currentUserKey"];
+        
+        if (_currentUsername) {
+            _currentUserLabel.text = [NSString stringWithFormat:@"Welcome , %@",_currentUsername];
+        } else {
+            _currentUserLabel.text = @"Welcome Guest User!";
+
+        }
+        
+        
     }
     
     
