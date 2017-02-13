@@ -351,7 +351,7 @@
                         UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
                         [alert addAction:cancelAction];
                         [self presentViewController:alert animated:YES completion:nil];
-                        [self performSegueWithIdentifier:@"backMainView" sender:self];
+                        //[self performSegueWithIdentifier:@"backMainView" sender:self];
                     }
                 //不存在已有用户
                 else{
@@ -419,12 +419,219 @@
 }
 
 - (IBAction)loginBtnFuc:(id)sender {
-    //
+    //判断用户名为空——逻辑1
+    if ([_userNameTextField.text isEqualToString:@""]) //([_passwdTextField.text isEqualToString:@""]) )
+    {
+        
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Warning!" message:@"Please enter your name" preferredStyle:UIAlertControllerStyleAlert];
+        
+        //alernate messge and title color
+        NSMutableAttributedString *alertTitleStr = [[NSMutableAttributedString alloc] initWithString:@"Warning"];
+        [alertTitleStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:25] range:NSMakeRange(0, 7)];
+        [alertTitleStr addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(0, 7)];
+        [alert setValue:alertTitleStr forKey:@"attributedTitle"];
+        
+        NSMutableAttributedString *alertMessageStr = [[NSMutableAttributedString alloc] initWithString:@"Please enter your name"];
+        [alertMessageStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:18] range:NSMakeRange(0,22)];
+        [alertMessageStr addAttribute:NSForegroundColorAttributeName value:[UIColor blueColor] range:NSMakeRange(0,22)];
+        //可以指定不同的颜色
+        //[alertMessageStr addAttribute:NSForegroundColorAttributeName value:[UIColor greenColor] range:NSMakeRange(16, 22)];
+        //[alertMessageStr addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(23, 34)];
+        [alert setValue:alertMessageStr forKey:@"attributedMessage"];
+        
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
+        [cancelAction setValue:[UIColor blueColor] forKey:@"_titleTextColor"];
+        
+        [alert addAction:cancelAction];
+        
+        /*
+         UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"I'm sure." style:UIAlertActionStyleDestructive handler:nil];
+         [alert addAction:okAction];
+         */
+        [self presentViewController:alert animated:YES completion:nil];
+        
+        
+    } else {
+        //判断密码为空——逻辑2
+        if ([_passwdTextField.text isEqualToString:@""] ) {
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Warning!" message:@"Please enter your password" preferredStyle:UIAlertControllerStyleAlert];
+            
+            //alernate messge and title color
+            NSMutableAttributedString *alertTitleStr = [[NSMutableAttributedString alloc] initWithString:@"Warning"];
+            [alertTitleStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:25] range:NSMakeRange(0, 7)];
+            [alertTitleStr addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(0, 7)];
+            [alert setValue:alertTitleStr forKey:@"attributedTitle"];
+            
+            NSMutableAttributedString *alertMessageStr = [[NSMutableAttributedString alloc] initWithString:@"Please enter your password"];
+            [alertMessageStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:18] range:NSMakeRange(0,26)];
+            [alertMessageStr addAttribute:NSForegroundColorAttributeName value:[UIColor blueColor] range:NSMakeRange(0,26)];
+            //可以指定不同的颜色
+            //[alertMessageStr addAttribute:NSForegroundColorAttributeName value:[UIColor greenColor] range:NSMakeRange(16, 22)];
+            //[alertMessageStr addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(23, 34)];
+            [alert setValue:alertMessageStr forKey:@"attributedMessage"];
+            
+            UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
+            [cancelAction setValue:[UIColor blueColor] forKey:@"_titleTextColor"];
+            
+            [alert addAction:cancelAction];
+            
+            /*
+             UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"I'm sure." style:UIAlertActionStyleDestructive handler:nil];
+             [alert addAction:okAction];
+             */
+            [self presentViewController:alert animated:YES completion:nil];
+        }
+        else {
+            //判断是否具有该用户 逻辑3
+            //Retrive all users
+            _allUsersArray = [[NSMutableArray alloc]init];
+            
+            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+            //    NSString *username = [defaults stringForKey:@"registerUserNameKey"];
+            //    NSString *passWord = [defaults stringForKey:@"passWordKey"];
+            _lastTag = [defaults integerForKey:@"lastTagKey"];
+            //NSLog(@"ViewDidLoad lastTag is %ld",(long)_lastTag);
+            //NSString  *userArrayKey = [NSString stringWithFormat:@"userArrayKey%ld",(long)_lastTag];
+            //NSArray *currentUserArray = [defaults objectForKey:userArrayKey];
+            
+            //NSString *username = [currentUserArray objectAtIndex:0];
+            //NSString *passWord = [currentUserArray objectAtIndex:1];
+            
+            if(_lastTag) {
+                //_userNameTextField.text = username;
+                //_passwdTextField.text = passWord;
+                
+                //Get all users
+                for (NSInteger i = 1; i<= _lastTag; i++) {
+                    NSLog(@"This is User%ld",(long)i);
+                    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+                    
+                    
+                    NSString  *userArrayKey = [NSString stringWithFormat:@"userArrayKey%ld",(long)i];
+                    NSArray *currentUserArray = [defaults objectForKey:userArrayKey];
+                    NSString *currentUser = [currentUserArray objectAtIndex:0];
+                    [_allUsersArray addObject:currentUser];
+                    NSLog(@"View did Load all Users is : %@",_allUsersArray);
+                    
+                }
+            }
+            
+            
+            
+            
+            
+            //_lastTag = [defaults integerForKey:@"lastTagKey"];
+            //判断是否存在UserDefaults文件
+            if (_lastTag) {
+                
+                //NSArray *array = [defaults objectForKey:userArrayKey];
+                //NSString *user = [array objectAtIndex:0];
+                //NSLog(@"Inside loop user is %@",user);
+                //NSMutableArray *allUsersArray=[[NSMutableArray alloc]init];
+                
+                //[allUsersArray addObject:user];
+                //NSLog(@"Inside loop allUsersArray is %@",allUsersArray);
+                
+                //if([allUsersArray containsObject:_userNameTextField.text])
+                
+                //Check allUserArray include userNameField.text
+                //NSLog(@"判断是否和现有用户重复 BOOL 3. allUserArray is:%@",_allUsersArray);
+                
+                //判断是否在现有用户列表array中
+                if([_allUsersArray containsObject:_userNameTextField.text])
+                {
+                    NSLog(@"存在已有用户:%@",_userNameTextField.text);
+                    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Welcome!" message:@"Sign in Success." preferredStyle:UIAlertControllerStyleAlert];
+                    //alernate messge and title color
+//                    NSMutableAttributedString *alertTitleStr = [[NSMutableAttributedString alloc] initWithString:@"Warning"];
+//                    [alertTitleStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:25] range:NSMakeRange(0, 7)];
+//                    [alertTitleStr addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(0, 7)];
+//                    [alert setValue:alertTitleStr forKey:@"attributedTitle"];
+                    
+//                    NSMutableAttributedString *alertMessageStr = [[NSMutableAttributedString alloc] initWithString:@"Press OK sign in"];
+//                    [alertMessageStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:14] range:NSMakeRange(0,16)];
+//                    [alertMessageStr addAttribute:NSForegroundColorAttributeName value:[UIColor blueColor] range:NSMakeRange(0, 16)];
+//                    [alert setValue:alertMessageStr forKey:@"attributedMessage"];
+                    
+                    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                        [self performSegueWithIdentifier:@"signInBack2HomePage" sender:self];
+                        
+                    }];
+                    [alert addAction:okAction];
+                    [self presentViewController:alert animated:YES completion:nil];
+                    
+                }
+                //不存在已有用户
+                else{
+                    NSLog(@"不存在已有用户:%@",_userNameTextField.text);
+                    //_lastTag ++;
+                    //NSString  *userArrayKey = [NSString stringWithFormat:@"userArrayKey%ld",(long)_lastTag];
+                    //NSArray *currentUserArray = [NSArray arrayWithObjects:_userNameTextField.text,_passwdTextField.text, nil];
+                    //NSLog(@"After currentUserArray is %@",currentUserArray);
+                    
+                    //[defaults setObject:currentUserArray forKey:userArrayKey];
+                    //[defaults setInteger:_lastTag forKey:@"lastTagKey"];
+                    //[_allUsersArray  addObject:_userNameTextField.text];
+                    //[defaults synchronize];
+                    //NSLog(@"无法找到该用户");
+                    
+                    //Pop up add user successful message
+                    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"用户不存在!" message:@"Please Register A User Account." preferredStyle:UIAlertControllerStyleAlert];
+                    UIAlertAction *OKAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+                    [alert addAction:OKAction];
+                    [self presentViewController:alert animated:YES completion:nil];
+                    
+                    
+                    
+                    //Clear user message box ;
+                    //                    _userNameTextField.text = [currentUserArray objectAtIndex:0];
+                    //                    _passwdTextField.text = [currentUserArray objectAtIndex:1];
+                    _userNameTextField.text = @"";
+                    _passwdTextField.text = @"";
+                }
+                
+            }
+            
+            //UserDefaults file doesn't exist.
+            else {
+                //设lastTag
+                //NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+                
+                //_lastTag = [defaults integerForKey:@"lastTagKey"];
+                //_lastTag = 1;
+                //NSLog(@"After lastTag is %ld",_lastTag);
+                
+                //NSString  *userArrayKey = [NSString stringWithFormat:@"userArrayKey%ld",(long)_lastTag];
+                
+                //NSArray *currentUserArray = [NSArray arrayWithObjects:_userNameTextField.text,_passwdTextField.text, nil];
+                NSLog(@"AUserDefaults file doesn't exist");
+                
+                //[defaults setObject:currentUserArray forKey:userArrayKey];
+                //[defaults setInteger:_lastTag forKey:@"lastTagKey"];
+                
+                
+                //[defaults synchronize];
+                //_passwdTextField.text = [currentUserArray objectAtIndex:0];
+                //_passwdTextField.text = [currentUserArray objectAtIndex:1];
+                //_lastTag ++;
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"用户不存在!" message:@"Please Register A User Account." preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertAction *OKAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+                [alert addAction:OKAction];
+                [self presentViewController:alert animated:YES completion:nil];
+
+                
+            }
+            
+            
+            
+            
+        }
+        
+    }
     
     
     
-    
-    //[self performSegueWithIdentifier:@"signInBack2HomePage" sender:self];
+  
 
     
 }
@@ -437,13 +644,16 @@
         VingVBHomePageViewController  *homeView = [segue destinationViewController];
         
         //Get currentUserName
-        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        NSString  *userArrayKey = [NSString stringWithFormat:@"userArrayKey%ld",(long)_lastTag];
-        NSArray *currentUserArray = [defaults objectForKey:userArrayKey];
+//        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//        NSString  *userArrayKey = [NSString stringWithFormat:@"userArrayKey%ld",(long)_lastTag];
+//        NSArray *currentUserArray = [defaults objectForKey:userArrayKey];
+//        
+//        NSString *username = [NSString stringWithFormat:@"%@,Wecome!", [currentUserArray objectAtIndex:0]];
+//        
+//        homeView.currentUsername = username;
         
-        NSString *username = [NSString stringWithFormat:@"%@,Wecome!", [currentUserArray objectAtIndex:0]];
+        homeView.currentUsername = _userNameTextField.text;
         
-        homeView.currentUsername = username;
     }
     
     

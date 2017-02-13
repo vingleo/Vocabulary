@@ -17,7 +17,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _currentUserLabel.text = _currentUsername;
+    if (_currentUsername) {
+        _currentUserLabel.text = [NSString stringWithFormat:@"Welcome , %@",_currentUsername];
+
+    } else{
+        _currentUserLabel.text = @"Please Sign in.";
+    }
     
     
 }

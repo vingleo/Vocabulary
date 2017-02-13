@@ -177,7 +177,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchIcon2" translatesAutoresizingMaskIntoConstraints="NO" id="eyl-8p-CiW">
                                 <rect key="frame" x="14" y="30" width="386" height="544"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="currentUser" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73p-39-ZZh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="currentUser" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73p-39-ZZh">
                                 <rect key="frame" x="62" y="558" width="291" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16" id="s4X-ko-bRu"/>
@@ -201,8 +201,8 @@
                             <constraint firstItem="bxh-ZV-lnb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Uxa-mF-4k7"/>
                             <constraint firstItem="lfd-25-2iS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="67" id="bXw-uI-e9U"/>
                             <constraint firstItem="z9R-81-lX9" firstAttribute="top" secondItem="73p-39-ZZh" secondAttribute="bottom" constant="8" id="biu-gC-hDl"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="73p-39-ZZh" secondAttribute="trailing" constant="20" id="gap-VY-htA"/>
-                            <constraint firstItem="73p-39-ZZh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="n8E-FJ-w0e"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="73p-39-ZZh" secondAttribute="trailing" constant="41" id="gap-VY-htA"/>
+                            <constraint firstItem="73p-39-ZZh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="42" id="n8E-FJ-w0e"/>
                             <constraint firstAttribute="trailing" secondItem="bxh-ZV-lnb" secondAttribute="trailing" constant="20" id="qRP-gU-R59"/>
                             <constraint firstItem="fYb-sq-kLD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="qoQ-1i-6UY"/>
                             <constraint firstItem="eyl-8p-CiW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-6" id="vbU-xo-KiM"/>
@@ -778,8 +778,8 @@
         <image name="LaunchIcon2" width="235" height="176"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rZh-ek-p75"/>
+        <segue reference="ptt-KP-HDF"/>
         <segue reference="w96-CR-BPD"/>
-        <segue reference="TWZ-Hy-JJ3"/>
+        <segue reference="DIl-w7-Ld5"/>
     </inferredMetricsTieBreakers>
 </document>
