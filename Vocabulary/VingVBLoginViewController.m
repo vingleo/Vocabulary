@@ -152,8 +152,8 @@
     NSString *passWord = [currentUserArray objectAtIndex:1];
     
     if(_lastTag) {
-        _userNameTextField.text = username;
-        _passwdTextField.text = passWord;
+       // _userNameTextField.text = username;
+       // _passwdTextField.text = passWord;
         
         //Get all users
         for (NSInteger i = 1; i<= _lastTag; i++) {
@@ -510,6 +510,7 @@
                     NSString  *userArrayKey = [NSString stringWithFormat:@"userArrayKey%ld",(long)i];
                     NSArray *currentUserArray = [defaults objectForKey:userArrayKey];
                     NSString *currentUser = [currentUserArray objectAtIndex:0];
+                    _currentPassWd= [currentUserArray objectAtIndex:1];
                     [_allUsersArray addObject:currentUser];
                     NSLog(@"View did Load all Users is : %@",_allUsersArray);
                     
@@ -540,25 +541,55 @@
                 //判断是否在现有用户列表array中
                 if([_allUsersArray containsObject:_userNameTextField.text])
                 {
-                    NSLog(@"存在已有用户:%@",_userNameTextField.text);
-                    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Welcome!" message:@"Sign in Success." preferredStyle:UIAlertControllerStyleAlert];
-                    //alernate messge and title color
-//                    NSMutableAttributedString *alertTitleStr = [[NSMutableAttributedString alloc] initWithString:@"Warning"];
-//                    [alertTitleStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:25] range:NSMakeRange(0, 7)];
-//                    [alertTitleStr addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(0, 7)];
-//                    [alert setValue:alertTitleStr forKey:@"attributedTitle"];
-                    
-//                    NSMutableAttributedString *alertMessageStr = [[NSMutableAttributedString alloc] initWithString:@"Press OK sign in"];
-//                    [alertMessageStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:14] range:NSMakeRange(0,16)];
-//                    [alertMessageStr addAttribute:NSForegroundColorAttributeName value:[UIColor blueColor] range:NSMakeRange(0, 16)];
-//                    [alert setValue:alertMessageStr forKey:@"attributedMessage"];
-                    
-                    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-                        [self performSegueWithIdentifier:@"signInBack2HomePage" sender:self];
+                    //check password match
+                    if ([_passwdTextField.text isEqualToString:_currentPassWd]) {
+                        //password correct
+                        NSLog(@"%@ 账号密码正确",_userNameTextField.text);
+                        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Welcome!" message:@"Sign in Success." preferredStyle:UIAlertControllerStyleAlert];
+                        //alernate messge and title color
+                        //                    NSMutableAttributedString *alertTitleStr = [[NSMutableAttributedString alloc] initWithString:@"Warning"];
+                        //                    [alertTitleStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:25] range:NSMakeRange(0, 7)];
+                        //                    [alertTitleStr addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(0, 7)];
+                        //                    [alert setValue:alertTitleStr forKey:@"attributedTitle"];
                         
-                    }];
-                    [alert addAction:okAction];
-                    [self presentViewController:alert animated:YES completion:nil];
+                        //                    NSMutableAttributedString *alertMessageStr = [[NSMutableAttributedString alloc] initWithString:@"Press OK sign in"];
+                        //                    [alertMessageStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:14] range:NSMakeRange(0,16)];
+                        //                    [alertMessageStr addAttribute:NSForegroundColorAttributeName value:[UIColor blueColor] range:NSMakeRange(0, 16)];
+                        //                    [alert setValue:alertMessageStr forKey:@"attributedMessage"];
+                        
+                        //check password is correct
+                        
+                        
+                        
+                        
+                        
+                        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                            [self performSegueWithIdentifier:@"signInBack2HomePage" sender:self];
+                            
+                        }];
+                        [alert addAction:okAction];
+                        [self presentViewController:alert animated:YES completion:nil];
+
+                        
+                        
+                        
+                        
+                        
+                        
+                    } else {
+                        //passwrd is correct ,Alert
+                        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Error!" message:@"Password doesn't match,please try again." preferredStyle:UIAlertControllerStyleAlert];
+                        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
+                        [alert addAction:okAction];
+                        [self presentViewController:alert animated:YES completion:nil];
+                        _passwdTextField.text = @"";
+                        
+                        
+                                            }
+
+                    
+                    
+                    
                     
                 }
                 //不存在已有用户
@@ -586,8 +617,11 @@
                     //Clear user message box ;
                     //                    _userNameTextField.text = [currentUserArray objectAtIndex:0];
                     //                    _passwdTextField.text = [currentUserArray objectAtIndex:1];
-                    _userNameTextField.text = @"";
                     _passwdTextField.text = @"";
+
+                    
+                    
+                    
                 }
                 
             }

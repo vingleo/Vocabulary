@@ -20,6 +20,8 @@
 @property NSInteger lastTag;
 
 @property NSMutableArray *allUsersArray;
+@property NSString *currentPassWd;
+
 @property (weak, nonatomic) IBOutlet UISegmentedControl *signSegment;
 @property (weak, nonatomic) IBOutlet UIButton *signInButton;
 @property (weak, nonatomic) IBOutlet UIButton *signUpButton;
