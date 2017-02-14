@@ -356,13 +356,14 @@
                         [alert addAction:OKAction];
                         [self presentViewController:alert animated:YES completion:nil];
                         
-                        
+//                        _userNameTextField.text = [currentUserArray objectAtIndex:0];
+//                        _passwdTextField.text = [currentUserArray objectAtIndex:1];
                         
                         //Clear user message box ;
                         //                    _userNameTextField.text = [currentUserArray objectAtIndex:0];
                         //                    _passwdTextField.text = [currentUserArray objectAtIndex:1];
-                        _userNameTextField.text = @"";
-                        _passwdTextField.text = @"";
+//                        _userNameTextField.text = @"";
+//                        _passwdTextField.text = @"";
                     }
                 }
             
