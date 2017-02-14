@@ -199,9 +199,6 @@
 
 #pragma mark-- Sign in & Sign up Button function
 - (IBAction)registerBtnFuc:(id)sender {
-    
-    
-    
     //NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     //NSString  *userArrayKey = [NSString stringWithFormat:@"userArrayKey%ld",(long)_currentTag];
@@ -215,7 +212,7 @@
     
     
     //判断用户名为空——逻辑1
-    if ([_userNameTextField.text isEqualToString:@""]) //([_passwdTextField.text isEqualToString:@""]) )
+    if (_userNameTextField.text.length == 0) //([_passwdTextField.text isEqualToString:@""]) )
     {
         
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Warning!" message:@"Please enter your name" preferredStyle:UIAlertControllerStyleAlert];
@@ -248,7 +245,8 @@
         
     } else {
         //判断密码为空——逻辑2
-        if ([_passwdTextField.text isEqualToString:@""] ) {
+        NSRange _range =  [_passwdTextField.text rangeOfString:@" "];
+        if ((_passwdTextField.text.length == 0 ) ||(_range.location != NSNotFound)){
             UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Warning!" message:@"Please enter your password" preferredStyle:UIAlertControllerStyleAlert];
             
             //alernate messge and title color
@@ -309,7 +307,15 @@
                     NSString *currentUser = [currentUserArray objectAtIndex:0];
                     [_allUsersArray addObject:currentUser];
                     NSLog(@"View did Load all Users is : %@",_allUsersArray);
-                    //判断是否在现有用户列表array中
+                }
+            }
+            
+            
+            
+            //判断是否存在UserDefaults文件
+            if (_lastTag) {
+
+                //判断是否在现有用户列表array中
                     if([_allUsersArray containsObject:_userNameTextField.text])
                     {
                         NSLog(@"存在已有用户");
@@ -359,7 +365,7 @@
                         _passwdTextField.text = @"";
                     }
                 }
-            }
+            
             //不存在UserDefaults文件
             //UserDefaults file doesn't exist.
             else {
@@ -400,7 +406,7 @@
 
 - (IBAction)loginBtnFuc:(id)sender {
     //判断用户名为空——逻辑1
-    if ([_userNameTextField.text isEqualToString:@""]) //([_passwdTextField.text isEqualToString:@""]) )
+    if (_userNameTextField.text.length == 0) //([_passwdTextField.text isEqualToString:@""]) )
     {
         
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Warning!" message:@"Please enter your name" preferredStyle:UIAlertControllerStyleAlert];
@@ -433,7 +439,7 @@
         
     } else {
         //判断密码为空——逻辑2
-        if ([_passwdTextField.text isEqualToString:@""] ) {
+        if (_passwdTextField.text.length == 0) {
             UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Warning!" message:@"Please enter your password" preferredStyle:UIAlertControllerStyleAlert];
             
             //alernate messge and title color
@@ -477,6 +483,7 @@
             //NSString *username = [currentUserArray objectAtIndex:0];
             //NSString *passWord = [currentUserArray objectAtIndex:1];
             
+            //判断是否存在NSUserDefaults文件，存在则获取所有用户
             if(_lastTag) {
                 //_userNameTextField.text = username;
                 //_passwdTextField.text = passWord;
@@ -501,8 +508,7 @@
             
             
             
-            //_lastTag = [defaults integerForKey:@"lastTagKey"];
-            //判断是否存在UserDefaults文件
+            //判断是否存在NSUserDefaults文件,存在则比对用户是否存在
             if (_lastTag) {
                 
                 //NSArray *array = [defaults objectForKey:userArrayKey];
@@ -556,6 +562,7 @@
                         
                     } else {
                         //passwrd isn't  correct ,Alert
+                        NSLog(@"%@ 账号密码不正确",_userNameTextField.text);
                         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Error!" message:@"Password doesn't match,please try again." preferredStyle:UIAlertControllerStyleAlert];
                         UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
                         [alert addAction:okAction];
@@ -603,7 +610,7 @@
                 
             }
             
-            //UserDefaults file doesn't exist.
+            //NSUserDefaults file doesn't exist.
             else {
                 //设lastTag
                 //NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -615,7 +622,7 @@
                 //NSString  *userArrayKey = [NSString stringWithFormat:@"userArrayKey%ld",(long)_lastTag];
                 
                 //NSArray *currentUserArray = [NSArray arrayWithObjects:_userNameTextField.text,_passwdTextField.text, nil];
-                NSLog(@"AUserDefaults file doesn't exist");
+                NSLog(@"NSUserDefaults file doesn't exist");
                 
                 //[defaults setObject:currentUserArray forKey:userArrayKey];
                 //[defaults setInteger:_lastTag forKey:@"lastTagKey"];
@@ -625,7 +632,7 @@
                 //_passwdTextField.text = [currentUserArray objectAtIndex:0];
                 //_passwdTextField.text = [currentUserArray objectAtIndex:1];
                 //_lastTag ++;
-                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"用户不存在!" message:@"Please Register A User Account." preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"User doesn't exist!" message:@"Please Register A User Account." preferredStyle:UIAlertControllerStyleAlert];
                 UIAlertAction *OKAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
                 [alert addAction:OKAction];
                 [self presentViewController:alert animated:YES completion:nil];
